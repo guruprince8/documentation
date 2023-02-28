@@ -1,0 +1,5 @@
+-- legacy agents
+-- standard agents
+-- advanced agents
+-- queue processors
+-- job schedulers

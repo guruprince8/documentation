@@ -1,0 +1,6 @@
+https://docs.pega.com/pega-collections-guide/pega-collections-guide 
+https://docs.pega.com/pega-customer-decision-hub-financial-services-85-implementation-guide/85/configuring-collections-logic
+https://docs.pega.com/pega-customer-decision-hub-collections-user-guide/86/pega-customer-decision-hub-collections-86-user-guide
+
+/* 8.2 */
+https://community.pega.com/system/files/media/pdf/pega-marketing-financial-services-82-implement-your-collections-solution-guide.pdf

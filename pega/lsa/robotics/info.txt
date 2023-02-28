@@ -1,0 +1,11 @@
+Overview of Pega Robot Studio v21 Preview 2
+
+/* https://docs.pega.com/pega-robot-studio-v21-preview/robotic-process-automation/overview-pega-robot-studio-v21-preview-2 */
+
+/* https://docs.pega.com/pega-rpa/pega-robotic-automation-installation-instructions */
+
+/* https://docs.pega.com/pega-robot-manager/862/pega-robot-manager */
+
+-- robot manager
+https://community.pega.com/marketplace/components/pega-robot-manager
+https://docs.pega.com/pega-robot-manager/871/pega-robot-manager
