@@ -1,1 +1,20 @@
--- ecrm password lndsxklizsrkjrad 
+
+/* host guru-rhel8.local - 192.168.1.7 */
+http
+http://guru-rhel8.local:8080/prweb
+
+https
+https://guru-rhel8.local:8443/prweb
+
+users
+ 1. administrator@pega.com/October@2022
+ 2. ECRMAuthor / Sept@2022
+
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+ /* host desktop-rsb512b.local - 192.168.1.4 */
+ http://desktop-rsb512b.local:8081/prweb
+
+ users
+ 1. mahesh / install
+ 2. ECRMAuthor / September@2022
