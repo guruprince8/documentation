@@ -1,0 +1,21 @@
+https://about.gitlab.com/install/#ubuntu
+
+sudo apt-get install -y curl openssh-server ca-certificates tzdata perl
+sudo apt-get install -y postfix
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
+sudo EXTERNAL_URL="https://gitlab.example.com" apt-get install gitlab-ee
+sudo apt-get install gitlab-ee
+
+sudo gitlab-ctl reconfigure
+
+sudo gitlab-ctl status
+
+sudo gitlab-ctl start
+
+sudo gitlab-ctl stop
+
+/etc/gitlab/initial_root_password
+
+/etc/gitlab/gitlab.rb
+
+https://github.com/guruprince8/gitlab/new/main

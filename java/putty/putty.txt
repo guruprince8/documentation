@@ -1,0 +1,9 @@
+sample
+
+Transfer files using putty 
+
+https://it.cornell.edu/managed-servers/transfer-files-using-putty#:~:text=Install%20PuTTY%20SCP%20(PSCP),-Back%20to%20Top&text=PSCP%20is%20a%20tool%20for,saving%20it%20to%20your%20computer.
+
+pscp c:\documents\info.txt userid@server.example.com:/tmp/foo/info.txt
+
+pscp.exe C:\guru\LSA\tech\nodejs\*.* guru@192.168.1.8:/opt/node

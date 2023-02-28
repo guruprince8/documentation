@@ -1,0 +1,33 @@
+https://wiremock.org/docs/simulating-faults/
+https://wiremock.org/
+
+-- stand alone jar 
+https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-jre8-standalone/2.35.0/wiremock-jre8-standalone-2.35.0.jar
+
+-- run jar 
+java -jar wiremock-jre8-standalone-2.35.0.jar --port 9999
+
+
+docker run -it --rm  -p 9998:8080 --name wiremock wiremock/wiremock:2.35.0
+
+-- GET
+http://guru-rhel8.local:9998/__admin/mappings
+
+--POST 
+http://guru-rhel8.local:9998/__admin/mappings
+{
+  "request": {
+    "method": "GET",
+    "url": "/some/thing"
+  },
+  "response": {
+    "body": "Hello world!",
+    "headers": {
+      "Content-Type": "text/plain"
+    },
+    "status": 200
+  }
+}
+
+-- CURL
+curl --location --request GET 'http://guru-rhel8.local:9999/some/thing'
