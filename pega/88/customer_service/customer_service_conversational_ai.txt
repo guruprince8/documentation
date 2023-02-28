@@ -1,0 +1,16 @@
+- Voice AI 
+ - automate work
+  - 
+  - Boost productvity
+  - Ensure complaince
+  - Post call analytics
+   - suggested cases and articles
+   - script complaince
+   - call efficiency
+   - auto fill
+ - Enhance Timeline wrap up and review
+ - Live Transcipt view
+ - supervisor alerts
+ - auto fill form for mutiple entities
+ - auto fill for embedded properties
+ - Intgeration with PDC

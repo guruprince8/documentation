@@ -1,0 +1,65 @@
+- Forreste Wave CRM
+-- 87
+- Conversational UI 
+ - Voice AI
+ - Messaging AI
+
+- Optimize Interactions
+ - Asynchronous Web Messaging
+ - Proactive Chat
+ - Mobile Messaging SDK
+ - Multi Language support for IVA
+
+- Implement with greater speed
+ - Digital Messaging API
+ - OOTB micro journey
+ - Business conditions for case suggestions
+ - Email and knowledge enhancements
+
+- AI agent guided experience
+ - Drive revenue in contact center
+  - real and personalized offers
+  - dynamic offers based on voice ai and message ai
+  - train model based on agent responses
+- Voice & Message AI enhancements
+ - minimize wrap up
+ - alert supervisor based on event
+ - new actionable insights / reports
+
+- Engage Customers in Digital Channels
+ - Better connect customers and agents
+  - Intelligent routing using contextual data and agent availability
+  - Easily escalate from chat to voice
+ - Proactively engage customer in Mobile
+  - Push Notifications
+ - IVA personalization
+  - rigth conversation
+  - improved language support
+
+- Workflow automation
+ - Process extender for salesforce lightining
+ - Case Workflow best practices
+ - New options to embed self service  
+
+-- 88
+- Voice AI & Message AI enhancements
+ - supervisor alerts
+ - Digital Message enhancements
+  - contextual and agent availability
+  - escalation chat to voice
+ - Push Notifications
+  - mobile Notifications
+
+- Workflow automation
+ - Process extender for salesforce
+ - Best practices
+ - self service
+
+ - Security, performance and accessability enhancements
+  - bring your own key
+  - hippa attestation
+  - performance and scalability
+   - access to voice ai metrics
+   - NLP to reduce load on customer environments
+   
+    

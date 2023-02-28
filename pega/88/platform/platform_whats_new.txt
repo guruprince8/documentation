@@ -1,0 +1,16 @@
+- process ai
+- reporting and dashboard experience
+- developer resources
+ - App Studio
+  - data modelling
+  - oData Integration SAP / Microsoft 
+  - AI assisted developer panel
+    - guardrails 
+    - recommendations
+
+- Data and Insights
+ - Themes
+  - primary fields
+  - search
+  - summary and grid single view
+  

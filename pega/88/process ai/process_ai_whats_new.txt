@@ -1,0 +1,22 @@
+ - sense
+  - event stream processing
+  - process high speed iot
+  - excecute on kafka streams
+- decide
+ - classify, segment, automate triage
+ - NLP category, sentiment, entities
+ - SLA adherence, cost, complexity
+- action
+ - automate, route, escalate
+ - assist user with ai insights
+ - workflow prioritization
+
+- App Studio 
+ - case prediction 
+ - prediction gadget
+- Prediction Studio
+ - model frequency 1 hr
+ - predictors tab in ADM
+ - export of ADM & DataMart
+ - Prediction Ananlysis Tab - top 5 / worst performing 5 
+- reports

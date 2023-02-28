@@ -1,0 +1,25 @@
+- Personalized offers engine
+ - Realtime context 
+ - Real time triggers 
+  -  voice & messaging api's
+ - Real time decisions
+  - next best actions
+
+- Connectors
+ - Adobe experience platform
+ - Celebrus
+ - Zine One
+
+ - 1 : 1 operations manager
+   - fast releases
+    - categorize
+    - swap
+    - place
+    - monitor
+    - apply
+  - Impact Analyzer
+   - Engagement and customer value
+   - AI & ML
+   - Business Levers
+   - Eligibility Criteria
+   - Customer Lifetime Value / Value finder

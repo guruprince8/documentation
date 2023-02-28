@@ -1,0 +1,12 @@
+- Forrester's Core Report
+- Deliver Intelligent Insights
+ - Relational Maps
+   - templates 
+   - buyer personas
+   - b2b
+   - b2c
+ - Voice AI for Sales
+- Cosmos UI for Mobile
+ - Intuitive user experience
+ - build once and deploy anywhere
+ 

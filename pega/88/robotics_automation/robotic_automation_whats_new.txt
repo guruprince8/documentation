@@ -1,0 +1,7 @@
+- Robotic Studio V22
+ - Intelligent Recording
+ - Toolbox
+- Rapid debugging
+- Run
+- Application assets 
+- Deploy quicker & run faster

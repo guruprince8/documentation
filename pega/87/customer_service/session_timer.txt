@@ -1,0 +1,162 @@
+- CSPortalHeaderWrapper
+ - pxSessionTimer
+   - pega.d.TimeoutTime
+   - pega.d.TimeoutWarningWindow
+   - pega.d.TimeoutPopuptype
+   - pega.d.TimeoutWarningCountdown
+   - pega.d.TimeoutPopupHeight
+   - pega.d.TimeoutPopupWidth
+   - pega.d.TimeoutWarning
+
+   - RefreshCallVolume
+    - CallVolumeRefreshRate
+
+    -- SafeURL_createFromURL
+
+
+Pega-Engine • prconfig/initialization/submitobfuscatedurl/default
+
+prconfig/initialization/submitobfuscatedurl/default - required
+
+prconfig/initialization/urlencryption/default - true
+
+
+    <%
+String workHandle = tools.getActiveValue();
+String strPublicLinkURL = pega_procom_pegaprocomutilities.getPublicLinkURL();
+String workURLParams = "pyActivity=Work-.Open&Action=Review&InsHandle="+workHandle;
+String encodedworkparamsURL = pega_rules_utilities.pzEncryptURLActionString(tools, "Thread", workURLParams); 
+String encodedworkURL = strPublicLinkURL +"?"+encodedworkparamsURL;
+
+String workId = pega_rules_string.whatComesAfterLast(workHandle,' ');
+
+%>
+
+
+<%=pega_rules_utilities.pzEncryptURLActionString(tools, "Thread", "@baseclass.ShowLogoffTimer?time=1")%>; 
+
+<a href='<%= encodedworkURL %>'><%= workId %></a>
+
+https://docs-previous.pega.com/security/85/verify-requests-application-layer
+https://docs-previous.pega.com/security/85/verifying-requests-when-using-custom-controls
+
+
+
+
+
+<%String strPropertyName = tools.getActive().getName(); 
+String splitButtonId = "PEGA_SPLITBTN" + strPropertyName;
+String strCaption=tools.getParamValue("FindCaption");
+
+ClipboardPage requestorPage = tools.findPage("pxRequestor");
+String userID = requestorPage.getString("pyUserIdentifier");
+
+/* Start - Registering action for getNextWorkItem*/
+ClipboardPage actionPage = pega.getUIEngine().getUIActionPage("getNextWorkItem");
+actionPage.getPage("pyActionAPI").putString("strUserId",userID);
+pega.getUIEngine().getUIAction(actionPage).register();
+actionPage.removeFromClipboard();
+/* End - Registering action for getNextWorkItem*/
+
+/* Start - Registering action for openUrlInWindow*/
+ClipboardPage openUrlPage = pega.getUIEngine().getUIActionPage("openUrlInWindow");
+openUrlPage.getPage("pyActionAPI").putString("pyActivity","Rule-Obj-ListView.ShowView");
+openUrlPage.getPage("pyActionAPI").putString("pyUseAlternateUrlBase","false");
+
+pega.getUIEngine().getUIAction(openUrlPage).register();
+openUrlPage.removeFromClipboard();
+/* End - Registering action for openUrlInWindow*/
+
+pega_rules_utilities.pzRegisterActivity(tools, "@baseclass.FindWorkByIDInApp");
+pega_rules_utilities.pzRegisterActivity(tools, "Rule-Obj-ListView.ShowView");
+pega_rules_utilities.pzRegisterActivity(tools, "Rule-Obj-ListView.Process");
+pega_rules_utilities.pzRegisterActivity(tools, "@baseclass.Show-Harness");
+pega_rules_utilities.pzRegisterActivity(tools, "@baseclass.ShowMgrReports");
+pega_rules_utilities.pzRegisterActivity(tools, "Rule-Obj-SummaryView.ShowView");
+pega_rules_utilities.pzRegisterActivity(tools, "Rule-Obj-SummaryView.RemovePages");
+
+
+ClipboardPage openUrlPage = pega.getUIEngine().getUIActionPage("openUrlInWindow");
+openUrlPage.getPage("pyActionAPI").putString("pyActivity","@baseclass.ShowLogoffTimer");
+pega.getUIEngine().getUIAction(openUrlPage).register();
+openUrlPage.removeFromClipboard();
+
+
+/* Start - Registering action for openUrlInModal */
+ClipboardPage openUrlPage = pega.getUIEngine().getUIActionPage("openUrlInModal");
+openUrlPage.getPage("pyActionAPI").putString("pyActivity","@baseclass.ShowLogoffTimer");
+pega.getUIEngine().getUIAction(openUrlPage).register();
+openUrlPage.removeFromClipboard();
+
+/* Start - Registering action for openUrlInModal */
+ClipboardPage openUrlPage = pega.getUIEngine().getUIActionPage("showModalDialog");
+openUrlPage.getPage("pyActionAPI").putString("pyActivity","@baseclass.ShowLogoffTimer");
+pega.getUIEngine().getUIAction(openUrlPage).register();
+openUrlPage.removeFromClipboard();
+
+
+
+
+
+https://guru-rhel8.local:8443/prweb/app/ecrm_/1nn7SjBwqRTjftTXEcFf0Q*/!STANDARD?pyActivity=pzRunActionWrapper&time=60000&pzActivity=%40baseclass.ShowLogoffTimer&skipReturnResponse=true&pySubAction=runAct&pzHarnessID=HIDFBB19ADC2409C77BE9844DD168661E24
+
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Connection: keep-alive
+Cookie: Pega-Perf=itkn=1; Pega-RULES=%09%7Bpd%7DAAAAApx%2F2ujjIyDwq2l8I3TMN9deNWjYyjlte2BVqe%2BF7XefV1mPwAPGOmSES5FixlB5dQ%3D%3DA%7Bapp%7D; JSESSIONID=2ED9F68FA9AAFB24FCCD659F72E4E2C3
+Host: guru-rhel8.local:8443
+Referer: https://guru-rhel8.local:8443/prweb/app/ecrm_/1nn7SjBwqRTjftTXEcFf0Q*/!STANDARD?pzPostData=-140146081
+Sec-Fetch-Dest: iframe
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_7_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36
+pyActivity: pzRunActionWrapper
+time: 60000
+pzActivity: @baseclass.ShowLogoffTimer
+skipReturnResponse: true
+pySubAction: runAct
+pzHarnessID: HIDFBB19ADC2409C77BE9844DD168661E24
+
+
+
+var oSafeURL = new SafeURL("@baseclass.ShowLogoffTimer");
+
+window.showModalDialog(oSafeURL.toURL())
+
+
+
+pega.openUrlInModal.showModalDialog(new SafeURL("@baseclass.ShowLogoffTimer"),1,230,400, (ret)=>{})
+
+
+desktop_showTimeoutWarning(1)
+
+
+
+var url = SafeURL_createFromURL('<%=pega_rules_utilities.pzEncryptURLActionString(tools, "Thread","pyActivity=ShowCalendar")%>');
+
+
+
+   //var oSafeURL = new SafeURL("@baseclass.ShowLogoffTimer");
+    var oSafeURL = SafeURL_createFromURL('<%=pega_rules_utilities.pzEncryptURLActionString(tools, "Thread","@baseclass.ShowLogoffTimer")%>');
+    oSafeURL.put("time", iTime);
+ // var url = SafeURL_createFromURL('<%=pega_rules_utilities.pzEncryptURLActionString(tools, "Thread","pyActivity=ShowCalendar")%>');
+
+
+
+ //var oSafeURL = SafeURL_createFromURL('<%=pega_rules_utilities.pzEncryptURLActionString(tools, "Thread","@baseclass.ShowLogoffTimer")%>');
+    oSafeURL.put("time", iTime);
+
+    /*pega.openUrlInModal.showModalDialog*/
+    //window.alert(oSafeURL.toURL());
+    console.log("displaying logoff timer "+oSafeURL.toURL());
+
+
+    /prweb/app/nucleus_/jXddxhkoYjt8nXuACr_wbg*/!STANDARD?pzuiactionzzz=CXt0cn17U1RBTkRBUkR9NjJjMTQ1ODUyMDA0NTFkMGE5Yjg4ZjUwNjQzM2M1OGY3N2Q4Yzc3NTIwNTEwM2M2MGFkMWM3MTEwMzFlMzliNg%3D%3D*&time=60000
+
+    /prweb/app/nucleus_/jXddxhkoYjt8nXuACr_wbg*/!STANDARD?pzuiactionzzz=CXt0cn17U1RBTkRBUkR9NjJjMTQ1ODUyMDA0NTFkMGE5Yjg4ZjUwNjQzM2M1OGY3NmFjZWNjZDRjNGNlNzkxOTZiNDNmNzVjNGFhZGNhMGQzYzIwZTFiOWNjMGQ1OWFmMmMxYmQ5N2QzNTk1Mzg5*
+
+
+    /prweb/app/nucleus_/jXddxhkoYjt8nXuACr_wbg*/!STANDARD?pzuiactionzzz=CXt0cn17U1RBTkRBUkR9NjJjMTQ1ODUyMDA0NTFkMGE5Yjg4ZjUwNjQzM2M1OGY3NmFjZWNjZDRjNGNlNzkxOTZiNDNmNzVjNGFhZGNhMGQzYzIwZTFiOWNjMGQ1OWFmMmMxYmQ5N2QzNTk1Mzg5*

@@ -1,0 +1,14 @@
+/*** Platform JS varibles ***/
+pxClientSession -- requestor session id 
+pxReqHomeURI -- home URI along with host
+pxReqURI -- request URI excluding host
+
+/*** Session Timer Variables ***/
+- pega.d.TimeoutTime
+   - pega.d.TimeoutWarningWindow
+   - pega.d.TimeoutPopuptype
+   - pega.d.TimeoutWarningCountdown
+   - pega.d.TimeoutPopupHeight
+   - pega.d.TimeoutPopupWidth
+   - pega.d.TimeoutWarning
+   - desktop_showTimeoutWarning(1)
