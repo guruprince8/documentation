@@ -1,0 +1,16 @@
+-- project management
+  -- scope
+  -- cost
+  -- time ( start /end date )
+
+-- project life cycle
+  -- planning
+
+-- methodology
+  -- agile
+  -- scrum
+-- T |
+   I  |
+   M  |---------------------------------> cost
+   E  |
+      |
