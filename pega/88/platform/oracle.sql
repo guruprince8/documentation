@@ -28,6 +28,16 @@ ALTER USER COMMON_RULES_88 quota unlimited on USERS;
 ALTER USER COMMON_DATA_88 quota unlimited on USERS;
 ALTER USER COMMON_CUSTOMER_88 quota unlimited on USERS;
 
+/* 8.8.1 */
+alter session set "_ORACLE_SCRIPT"=true; 
+DROP USER RULES_88 CASCADE;
+DROP USER DATA_88 CASCADE;
+DROP USER CUSTOMER_88 CASCADE;
+
+CREATE USER RULES_88 IDENTIFIED BY oracle DEFAULT TABLESPACE USERS quota unlimited on USERS ;
+CREATE USER DATA_88 IDENTIFIED BY oracle DEFAULT TABLESPACE USERS quota unlimited on USERS;
+CREATE USER CUSTOMER_88 IDENTIFIED BY oracle DEFAULT TABLESPACE USERS quota unlimited on USERS;
+
 -- /Users/c302318/Desktop/peony/LSA/pega/87/ojdbc10.jar
 -- jdbc:oracle:thin:@//guru-rhel8.local:1539/orcl
 
