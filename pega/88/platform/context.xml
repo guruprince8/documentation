@@ -30,7 +30,6 @@
     -->
   <!-- postgres -->
   <!-- common -->
-  <!--
   <Resource name="jdbc/PegaRULES"
               auth="Container"
               type="javax.sql.DataSource"
@@ -42,143 +41,11 @@
               username="postgres"
               password="postgres"/>
 
-    <Environment name="prconfig/database/databases/PegaRULES/defaultSchema" value="common_rules" type="java.lang.String" />
+    <Environment name="prconfig/database/databases/PegaRULES/defaultSchema" value="rules_88" type="java.lang.String" />
 
-    <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="common_data" type="java.lang.String" />
+    <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="data_88" type="java.lang.String" />
 
-    <Environment name="prconfig/database/databases/CustomerData/defaultSchema" value="common_customer" type="java.lang.String" />
-
-    <Environment name="url/initialization/explicittempdir" value="/Users/c302318/Desktop/peony/tomcat/temp/common" type="java.lang.String" />
-  -->
-
-  <!-- cdh -->
-
-  <Resource name="jdbc/PegaRULES"
-              auth="Container"
-              type="javax.sql.DataSource"
-              maxTotal="100"
-              maxIdle="30"
-              maxWaitMillis="10000"
-              driverClassName="org.postgresql.Driver"
-              url="jdbc:postgresql://localhost:5432/postgres"
-              username="postgres"
-              password="postgres"/>
-
-    <Environment name="prconfig/database/databases/PegaRULES/defaultSchema" value="cdh_88_rules" type="java.lang.String" />
-
-    <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="cdh_88_data" type="java.lang.String" />
-
-    <Environment name="prconfig/database/databases/CustomerData/defaultSchema" value="cdh_88_customer" type="java.lang.String" />
+    <Environment name="prconfig/database/databases/CustomerData/defaultSchema" value="customer_88" type="java.lang.String" />
 
     <Environment name="url/initialization/explicittempdir" value="/Users/c302318/Desktop/peony/tomcat/temp/cdh" type="java.lang.String" />
-
-
- <!-- financial -->
- <!--
- <Resource name="jdbc/PegaRULES"
-              auth="Container"
-              type="javax.sql.DataSource"
-              maxTotal="100"
-              maxIdle="30"
-              maxWaitMillis="10000"
-              driverClassName="org.postgresql.Driver"
-              url="jdbc:postgresql://localhost:5432/postgres"
-              username="postgres"
-              password="postgres"/>
-
-    <Environment name="prconfig/database/databases/PegaRULES/defaultSchema" value="financial_rules" type="java.lang.String" />
-
-    <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="financial_data" type="java.lang.String" />
-
-    <Environment name="prconfig/database/databases/CustomerData/defaultSchema" value="financial_customer" type="java.lang.String" />
-
-    <Environment name="url/initialization/explicittempdir" value="/Users/c302318/Desktop/peony/softwares/tomcat/temp/financial" type="java.lang.String" />
-  -->
-  <!-- healthcare -->
-  <!--
-  <Resource name="jdbc/PegaRULES"
-              auth="Container"
-              type="javax.sql.DataSource"
-              maxTotal="100"
-              maxIdle="30"
-              maxWaitMillis="10000"
-              driverClassName="org.postgresql.Driver"
-              url="jdbc:postgresql://localhost:5432/postgres"
-              username="postgres"
-              password="postgres"/>
-
-    <Environment name="prconfig/database/databases/PegaRULES/defaultSchema" value="healthcare_rules" type="java.lang.String" />
-
-    <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="healthcare_data" type="java.lang.String" />
-
-    <Environment name="prconfig/database/databases/CustomerData/defaultSchema" value="healthcare_customer" type="java.lang.String" />
-
-    <Environment name="url/initialization/explicittempdir" value="/Users/c302318/Desktop/peony/tomcat/temp/healthcare" type="java.lang.String" />
-    -->
-    <!-- insurance -->
-    <!--
-    <Resource name="jdbc/PegaRULES"
-                auth="Container"
-                type="javax.sql.DataSource"
-                maxTotal="100"
-                maxIdle="30"
-                maxWaitMillis="10000"
-                driverClassName="org.postgresql.Driver"
-                url="jdbc:postgresql://localhost:5432/postgres"
-                username="postgres"
-                password="postgres"/>
-
-      <Environment name="prconfig/database/databases/PegaRULES/defaultSchema" value="insurance_rules" type="java.lang.String" />
-
-      <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="insurance_data" type="java.lang.String" />
-
-      <Environment name="prconfig/database/databases/CustomerData/defaultSchema" value="insurance_customer" type="java.lang.String" />
-
-      <Environment name="url/initialization/explicittempdir" value="/Users/c302318/Desktop/peony/tomcat/temp/insurance" type="java.lang.String" />
-
-  -->
-  <!-- oracle -->
-  <!--
-  <Resource name="jdbc/PegaRULES"
-              auth="Container"
-              type="javax.sql.DataSource"
-              maxTotal="100"
-              maxIdle="30"
-              maxWaitMillis="10000"
-              driverClassName="oracle.jdbc.OracleDriver"
-              url="jdbc:oracle:thin:@//guru-rhel8.local:1539/orcl"
-              username="system"
-              password="oracle"/>
-
-    <Environment name="prconfig/database/databases/PegaRULES/defaultSchema" value="COMMON_RULES" type="java.lang.String" />
-
-    <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="COMMON_DATA" type="java.lang.String" />
-
-    <Environment name="url/initialization/explicittempdir" value="/Users/c302318/Desktop/peony/tomcat/temp" type="java.lang.String" />
-   -->
-
-   <!-- financial -->
-   <!--
-
-   <Resource name="jdbc/PegaRULES"
-                auth="Container"
-                type="javax.sql.DataSource"
-                maxTotal="100"
-                maxIdle="30"
-                maxWaitMillis="10000"
-                driverClassName="oracle.jdbc.OracleDriver"
-                url="jdbc:oracle:thin:@//guru-rhel8.local:1539/orcl"
-                username="system"
-                password="oracle"/>
-
-      <Environment name="prconfig/database/databases/PegaRULES/defaultSchema" value="FINANCIAL_RULES" type="java.lang.String" />
-
-      <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="FINANCIAL_DATA" type="java.lang.String" />
-
-      <Environment name="prconfig/database/databases/CustomerData/defaultSchema" value="FINANCIAL_CUSTOMER" type="java.lang.String" />
-
-      <Environment name="url/initialization/explicittempdir" value="/Users/c302318/Desktop/peony/tomcat/temp/financial" type="java.lang.String" />
-   -->
-
-
 </Context>
