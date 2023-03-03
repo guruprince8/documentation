@@ -63,3 +63,44 @@ ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA data_88
 GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
 
 /******* USEFUL QUERIES ********/
+ CREATE VIEW data_88.MKT_COMMUNICATION_HISTORY AS SELECT ifr.pxinteractionid,
+    ifr.pysubjectid AS pycaseid,
+    ifr.pyexternalid,
+    isr.pybehaviour,
+    isr.pyresponse,
+    isr.pyoutcome,
+    irc.pycategory,
+    irc.pyreason,
+    vs.pycustomersegment AS pxsegment,
+    vs.pycustomersubsegment,
+    voo.pyorganization,
+    voo.pydivision,
+    voo.pyunit,
+    voo.pyoperator,
+    vp.pyissue,
+    vp.pygroup,
+    vp.pyname,
+    vc.pychannel,
+    vc.pydirection,
+    vc.pytreatment,
+    ifr.pxoutcometime AS pystamp,
+    ifr.revenue,
+    ifr.pyfulfilled,
+    ifr.pymaxbudget AS pybudget,
+    ifr.pytargetbudget,
+    ifr.pyweight,
+    ifr.pxrank,
+    ifr.pypropensity,
+        CASE isr.pyoutcome
+            WHEN 'Impression'::text THEN '1'::text
+            ELSE '0'::text
+        END AS pyopened,
+    vs.pysubjecttype,
+    irc.workid
+   FROM ((((((data_88.pr_data_ih_fact ifr
+     LEFT JOIN data_88.pr_data_ih_dim_context irc ON ((ifr.pzcontextid = irc.pzid)))
+     LEFT JOIN data_88.PR_DATA_IH_DIM_CUSTOMER vs ON ((ifr.pzcustomerid = vs.pzid)))
+     LEFT JOIN data_88.pr_data_ih_dim_operator voo ON ((ifr.pzoperatorid = voo.pzid)))
+     LEFT JOIN data_88.PR_DATA_IH_DIM_ACTION vp ON ((ifr.pzactionid = vp.pzid)))
+     LEFT JOIN data_88.pr_data_ih_dim_channel vc ON ((ifr.pzchannelid = vc.pzid)))
+     LEFT JOIN data_88.PR_DATA_IH_DIM_OUTCOME isr ON ((ifr.pzoutcomeid = isr.pzid)))
