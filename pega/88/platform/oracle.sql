@@ -1,4 +1,13 @@
 
+/*
+    oracle.jdbc.OracleDriver
+    /opt/tomcat/lib/ojdbc8.jar
+    jdbc:oracle:thin:@//localhost:1539/ORCL
+    rules_88
+    data_88
+    customer_88
+*/
+
 /* 
     http://guru-rhel8.local:8080/prweb
     administrator@pega.com/October@2022
