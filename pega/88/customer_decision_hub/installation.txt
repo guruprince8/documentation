@@ -1,0 +1,4 @@
+Prerequisites
+ DSS
+  Pega-Engine	- prconfig/database/databases/ExternalMKTData/defaultSchema/default - CUSTOMER_88
+  Pega-Engine	- prconfig/database/databases/ExternalMKTData/datasource/default - java:comp/env/jdbc/PegaRULES
