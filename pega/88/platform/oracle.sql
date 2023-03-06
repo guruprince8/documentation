@@ -16,6 +16,10 @@ CREATE USER RULES_88 IDENTIFIED BY oracle DEFAULT TABLESPACE USERS quota unlimit
 CREATE USER DATA_88 IDENTIFIED BY oracle DEFAULT TABLESPACE USERS quota unlimited on USERS;
 CREATE USER CUSTOMER_88 IDENTIFIED BY oracle DEFAULT TABLESPACE USERS quota unlimited on USERS;
 
+/*
+  administrator@pega.com/March@032023
+*/
+
 /* 
     http://guru-rhel8.local:8080/prweb
     administrator@pega.com/October@2022
