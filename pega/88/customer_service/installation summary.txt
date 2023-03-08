@@ -1,0 +1,18 @@
+/*** Pega's Foundation for Financial Services ***/
+
+https://docs.pega.com/bundle/foundation-financial-88/page/pega-foundation-for-financial-services/install-upgrade/pffs-install-upgrade-app-1.html
+\Rules\PegaFFS_Int.jar
+\Rules\PegaFFS.jar
+\Rules\PegaFFS_Sample.jar
+\Rules\PegaFFS_Schema.jar
+\Rules\PegaFFS_DataInstances.jar
+\Rules\PegaFFS_Int.jar
+
+\SampleData\PegaFFS_SampleSchema.jar
+\SampleData\PegaFFS_SampleDataInstances.jar
+\SampleData\PegaFFS_SnapSchema.jar
+\SampleData\PegaFFS_SnapDataInstances.jar
+
+/*** Pega's Customer Service ***/
+
+/*** Pega's Customer Service for Financial Services ***/
