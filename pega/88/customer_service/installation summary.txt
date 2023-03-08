@@ -24,5 +24,11 @@ https://docs.pega.com/bundle/foundation-financial-88/page/pega-foundation-for-fi
 \ResourceKit\PDFS\SampleData\PegaPDFSSampleObjects.jar
 
 /*** Pega's Customer Service ***/
+\Rules\PegaCRM.jar
+\PegaCRM_Patch.jar
+
+\SampleDB\PegaCRMSample_DDL.jar
+\SampleDB\PegaCRMSample_DML.jar
+\SampleDB\KMSample\KMSampleData.jar
 
 /*** Pega's Customer Service for Financial Services ***/
