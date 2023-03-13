@@ -31,5 +31,5 @@ guru / Mar@2023
 /Rules/FCC.jar
 /FCC_SampleCatalogData.jar 
 /Demo/UplusFCC.jar
-/FCC_SampleCatalogData.jar
+/UplusFCC_SampleCatalogData.jar
 
