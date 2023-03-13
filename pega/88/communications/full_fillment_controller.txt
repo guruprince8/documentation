@@ -13,3 +13,17 @@ https://github.com/tmforum-rand/schemas/blob/d5ddedb7844743490e576e99ef322ed4b55
 
 FCC Implementation
 https://community.pega.com/system/files/media/pdf/pega-fulfillment-control-center-for-communications-81-implementation-guide_2.pdf --- seems a 8.1 version
+
+
+-- installation
+guru / Mar@2023
+/Rules/PegaFoundationforCommunications.jar
+/Sample Data/Foundation_Sampledata.zip
+/OptionalComponents/PFCMACD.Jar
+
+/Rules/ProductCatalogforCommunications.jar
+/Sample_Data/ProductCatalog_SampleData.jar
+
+/ResourceKit/UPlusPCSampleApplication.jar
+/ResourceKit/UPlusPCSampleData.jar
+
