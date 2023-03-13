@@ -27,3 +27,9 @@ guru / Mar@2023
 /ResourceKit/UPlusPCSampleApplication.jar
 /ResourceKit/UPlusPCSampleData.jar
 
+-- FCC
+/Rules/FCC.jar
+/FCC_SampleCatalogData.jar 
+/Demo/UplusFCC.jar
+/FCC_SampleCatalogData.jar
+
