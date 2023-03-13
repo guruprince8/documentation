@@ -1,3 +1,15 @@
 -- TeleManagement Forum Open API's
 https://www.tmforum.org/oda/about-open-apis/
 https://projects.tmforum.org/wiki/display/API/Open+API+Table?_ga=2.6785456.346876545.1678674510-1653910855.1678674510&_gl=1*vbjtd7*_ga*MTY1MzkxMDg1NS4xNjc4Njc0NTEw*_ga_W21R8NVK4E*MTY3ODY3NDUwOS4xLjEuMTY3ODY5NDczNC4wLjAuMA..*_ga_KQXXW9EY6Y*MTY3ODY4ODA5MC4zLjEuMTY3ODY5NDczNC4wLjAuMA..
+
+Specification Document:
+https://www.tmforum.org/resources/specification/tmf622-product-ordering-management-api-rest-specification-r19-0-0/
+
+Data Model:
+http://datamodel.tmforum.org/en/latest/Customer/ProductOrder/#product-order-data-model
+
+JSON:
+https://github.com/tmforum-rand/schemas/blob/d5ddedb7844743490e576e99ef322ed4b55d8ca9/Customer/ProductOrder.schema.json
+
+FCC Implementation
+https://community.pega.com/system/files/media/pdf/pega-fulfillment-control-center-for-communications-81-implementation-guide_2.pdf --- seems a 8.1 version
