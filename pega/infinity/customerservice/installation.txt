@@ -1,5 +1,7 @@
 # Pega Customer Service Infinity Installation
 https://docs.pega.com/bundle/customer-service-financial/page/customer-service-financial/hub/customer-service-financial-get-started.html
+https://docs.pega.com/bundle/platform/page/platform/hub/platform-install-update.html
+https://docs.pega.com/bundle/platform/page/platform/deployment/platform-support-guide/platform-support-guide.html
 
 /* schema set up */
 
