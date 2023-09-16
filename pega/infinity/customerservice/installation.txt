@@ -73,3 +73,13 @@ GRANT EXECUTE ON FUNCTIONS TO postgres WITH GRANT OPTION;
 ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA customer_23
 GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
 
+
+https://docs.pega.com/bundle/common-data-model/page/common-data-model/install-update-adoption/import-application.html
+Media\Rules\Common.jar
+Media\Rules\Common-FinancialServices.jar
+Media\ResourceKit\CommonReferenceData.jar
+Media\ResourceKit\CommonFSReferenceData.jar
+
+https://docs-previous.pega.com/decision-management/87/configuring-external-kafka-stream-service
+
+
