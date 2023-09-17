@@ -928,3 +928,22 @@ java.lang.IllegalStateException: Calling a method from NodeLifecycle, before ini
 /* Invalid Replicator Factor */
 Caused by: org.apache.kafka.common.errors.InvalidReplicationFactorException: Replication factor: 2 larger than available brokers: 1.
 
+/* CRM Applciation Errors */
+Record	Message	Action
+COMMON-LDM-REFERENCE-FACCOMPLAINTTYPE 328C0F59-C3CC-4832-89D3-3262206C4240	Save Failed: Class Common-LDM-Reference-FACComplaintType does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON 90FADFBC-763C-4ED3-9AFC-AB50B9BCCC02	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON 9532310F-BB92-41A1-95F3-2A9012CCA414	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON 9A43C930-EEA3-4E61-A362-21210952A8BB	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON CA0A375F-E40C-4BC2-9F89-70082EC6D421	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON E79DB706-A77B-4823-AC11-5D5372C5B8E1	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON EE2C71E1-3129-4680-A189-50514437D845	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON FF4BAE98-A791-4D37-98E2-CED93FA0A96B	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-FACCOMPLAINTTYPE 81732366-DB8F-4B72-9A0D-825F0571307A	Save Failed: Class Common-LDM-Reference-FACComplaintType does not exist	Import
+COMMON-LDM-REFERENCE-FACCOMPLAINTTYPE A91D0D9C-E2F0-4926-8FA3-0D5C49739172	Save Failed: Class Common-LDM-Reference-FACComplaintType does not exist	Import
+COMMON-LDM-REFERENCE-FACCOMPLAINTTYPE C7828A62-4402-4A3F-A553-E39D8E29998B	Save Failed: Class Common-LDM-Reference-FACComplaintType does not exist	Import
+COMMON-LDM-REFERENCE-FACCOMPLAINTTYPE E89B2D8F-B154-4055-B5CA-77257C364250	Save Failed: Class Common-LDM-Reference-FACComplaintType does not exist	Import
+COMMON-LDM-REFERENCE-FACCOMPLAINTTYPE EC7E914D-F3F1-45C8-8981-82C65FC03F4B	Save Failed: Class Common-LDM-Reference-FACComplaintType does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON 21EE687F-A57B-4BC7-8E82-CB7EF037715C	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON 23629EBC-56A5-4E2E-9B3F-80CF2D05F441	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+COMMON-LDM-REFERENCE-REQUESTREASON 5571680F-3328-42CF-BD3E-BD92C060A6DC	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
+
