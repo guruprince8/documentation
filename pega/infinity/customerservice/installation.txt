@@ -121,4 +121,7 @@ https://docs.pega.com/bundle/customer-service-financial/page/customer-service/in
 \SampleData\PegaCRMFSSampleRules.jar
 \SampleData\PegaCRMFSKMSampleContent.jar
 
+/* Constellation URL */
+https://documents.constellation.pega.io/static/88/introduction.html
+
 
