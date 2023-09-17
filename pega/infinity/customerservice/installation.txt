@@ -79,6 +79,25 @@ https://hevodata.com/learn/install-kafka-on-mac/
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
 $ bin/kafka-server-start.sh config/server.properties
 
+/* Constellation URL */
+https://documents.constellation.pega.io/static/88/introduction.html
+https://documents.constellation.pega.io/static/88/constellation-appstatic-service-docker.html
+https://docs-previous.pega.com/user-experience/87/configuring-docker-authentication
+https://support.pega.com/system/files/attachments/reply/2021-06/how%20to%20pull%20constellation%20docker%20container%20image.pdf
+
+docker login pega-docker.downloads.pega.com
+docker pull pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246
+
+docker run -p 3000:3000 --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3000 root=/usr/src/app/dist urlPath=/c11n-appstatic
+
+
+docker run -p 3443:3443 -v /usr/abc/certs:/host_folder --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3443 root=/usr/src/app/dist urlPath=/c11n-appstatic httpsKey=afile.key httpsCert=bfile.cert
+
+docker run -p 3000:3000 -v /someexternaldrive:/usr/src/app/dist/customers --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3000 root=/usr/src/app/dist urlPath=/c11n-appstatic
+
+curl http://localhost:3000/c11n-appstatic/v860/ping
+curl http://localhost:3000/c11n-appstatic/v860/healthcheck
+
 / Install Common Application */
 https://docs.pega.com/bundle/common-data-model/page/common-data-model/install-update-adoption/import-application.html
 Media\Rules\Common.jar
@@ -121,7 +140,6 @@ https://docs.pega.com/bundle/customer-service-financial/page/customer-service/in
 \SampleData\PegaCRMFSSampleRules.jar
 \SampleData\PegaCRMFSKMSampleContent.jar
 
-/* Constellation URL */
-https://documents.constellation.pega.io/static/88/introduction.html
+
 
 
