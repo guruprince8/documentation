@@ -125,6 +125,7 @@ https://docs.pega.com/bundle/foundation-financial/page/pega-foundation-for-finan
 \ResourceKit\PDFS\SampleData\PegaPDFSSampleObjects.jar
 
 /* Installing CRM Application */
+https://docs.pega.com/bundle/customer-service/page/customer-service/install-update-adoption/import-application-file-1.html
 \Rules\CustomerService-Cases.jar
 \Rules\PegaCRM.jar
 \Rules\PegaCRM_Patch.jar
