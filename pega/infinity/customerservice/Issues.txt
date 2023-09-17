@@ -924,3 +924,7 @@ java.lang.IllegalStateException: Calling a method from NodeLifecycle, before ini
 16-Sep-2023 18:14:52.203 INFO [nss-admins-MBP.attlocal.net] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 16-Sep-2023 18:14:52.210 INFO [nss-admins-MBP.attlocal.net] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["https-jsse-nio-8443"]
 16-Sep-2023 18:14:52.211 INFO [nss-admins-MBP.attlocal.net] org.apache.catalina.startup.Catalina.start Server startup in [15022] milliseconds
+
+/* Invalid Replicator Factor */
+Caused by: org.apache.kafka.common.errors.InvalidReplicationFactorException: Replication factor: 2 larger than available brokers: 1.
+
