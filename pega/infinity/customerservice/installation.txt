@@ -86,6 +86,39 @@ Media\Rules\Common-FinancialServices.jar
 Media\ResourceKit\CommonReferenceData.jar
 Media\ResourceKit\CommonFSReferenceData.jar
 
+/* Installing Pega Foundation For Financial Services */
+https://docs.pega.com/bundle/foundation-financial/page/pega-foundation-for-financial-services/install-upgrade/pffs-install-upgrade-app-1.html
+\Rules\PegaFFS_Int.jar
+\Rules\PegaFFS.jar
+\Rules\PegaFFS_Sample.jar
+\Rules\PegaFFS_Schema.jar
+\Rules\PegaFFS_DataInstances.jar
+\SampleData\PegaFFS_SampleSchema.jar
+\SampleData\PegaFFS_SampleDataInstances.jar
+\SampleData\PegaFFS_SnapSchema.jar
+\SampleData\PegaFFS_SnapDataInstances.jar
 
+/* Installing PDFS application */
+https://docs.pega.com/bundle/foundation-financial/page/pega-foundation-for-financial-services/pdfs-install-upgrade/install-application.html
+\ResourceKit\PDFS\Rules\PegaPDFS.jar
+\ResourceKit\PDFS\rules\PegaPDFS_Implementation.jar
+\ResourceKit\PDFS\SampleData\PegaPDFSSampleProducts.jar
+\ResourceKit\PDFS\SampleData\PegaPDFSSampleObjects.jar
+
+/* Installing CRM Application */
+\Rules\CustomerService-Cases.jar
+\Rules\PegaCRM.jar
+\Rules\PegaCRM_Patch.jar
+\SampleDB\PegaCRMSample_DDL.jar
+\SampleDB\PegaCRMSample_DML.jar
+\SampleDB\KMSample\KMSampleData.jar
+
+/* Istalling CRM FS */
+https://docs.pega.com/bundle/customer-service-financial/page/customer-service/install-update-adoption/install-update-cs-apps-1.html
+\Rules\CustomerService-Cases-FS.jar
+\Rules\PegaCRMFS.jar
+\SampleData\PegaCRMFSSampleData.jar
+\SampleData\PegaCRMFSSampleRules.jar
+\SampleData\PegaCRMFSKMSampleContent.jar
 
 
