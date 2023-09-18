@@ -950,3 +950,6 @@ COMMON-LDM-REFERENCE-REQUESTREASON 5571680F-3328-42CF-BD3E-BD92C060A6DC	Save Fai
 /* ALLOCATE_PRODUCER_IDS */
 org.apache.kafka.common.errors.UnsupportedVersionException: The broker does not support ALLOCATE_PRODUCER_IDS
 
+/* Pega ALERTS */
+https://docs.pega.com/bundle/alerts/page/platform/alerts/pega0125-alert-service-registry-heartbeat-failed.html
+
