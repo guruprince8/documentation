@@ -947,3 +947,6 @@ COMMON-LDM-REFERENCE-REQUESTREASON 21EE687F-A57B-4BC7-8E82-CB7EF037715C	Save Fai
 COMMON-LDM-REFERENCE-REQUESTREASON 23629EBC-56A5-4E2E-9B3F-80CF2D05F441	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
 COMMON-LDM-REFERENCE-REQUESTREASON 5571680F-3328-42CF-BD3E-BD92C060A6DC	Save Failed: Class Common-LDM-Reference-RequestReason does not exist	Import
 
+/* ALLOCATE_PRODUCER_IDS */
+org.apache.kafka.common.errors.UnsupportedVersionException: The broker does not support ALLOCATE_PRODUCER_IDS
+
