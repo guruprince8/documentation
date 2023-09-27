@@ -82,6 +82,7 @@ $ bin/kafka-server-start.sh config/server.properties
 
 cd ~/Desktop/peony/LSA/pega/installations/23/cs/apache-tomcat-9.0.74
 sh bin/startup.sh
+tail -f  work/Catalina/localhost/prweb/ECRMAPI.log
 
 /* Constellation URL */
 https://documents.constellation.pega.io/static/88/introduction.html
