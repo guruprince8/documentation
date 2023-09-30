@@ -1,0 +1,44 @@
+/ * Reference Links link */
+https://github.com/kodekloudhub/certified-kubernetes-administrator-course
+https://minikube.sigs.k8s.io/docs/start/
+
+/* Installation Commands */
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
+sudo install minikube-darwin-arm64 /usr/local/bin/minikube
+
+minikube start
+😄  minikube v1.31.2 on Darwin 13.6 (arm64)
+✨  Automatically selected the docker driver
+📌  Using Docker Desktop driver with root privileges
+👍  Starting control plane node minikube in cluster minikube
+🚜  Pulling base image ...
+💾  Downloading Kubernetes v1.27.4 preload ...
+    > preloaded-images-k8s-v18-v1...:  327.74 MiB / 327.74 MiB  100.00% 34.79 M
+    > gcr.io/k8s-minikube/kicbase...:  404.50 MiB / 404.50 MiB  100.00% 22.29 M
+🔥  Creating docker container (CPUs=2, Memory=4000MB) ...
+🐳  Preparing Kubernetes v1.27.4 on Docker 24.0.4 ...
+    ▪ Generating certificates and keys ...
+    ▪ Booting up control plane ...
+    ▪ Configuring RBAC rules ...
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
+
+kubectl get po -A
+minikube kubectl -- get po -A
+NAMESPACE              NAME                                         READY   STATUS    RESTARTS        AGE
+kube-system            coredns-5d78c9869d-4zg6n                     1/1     Running   0               3m28s
+kube-system            etcd-minikube                                1/1     Running   0               3m42s
+kube-system            kube-apiserver-minikube                      1/1     Running   0               3m42s
+kube-system            kube-controller-manager-minikube             1/1     Running   0               3m42s
+kube-system            kube-proxy-cbr9z                             1/1     Running   0               3m29s
+kube-system            kube-scheduler-minikube                      1/1     Running   0               3m42s
+kube-system            storage-provisioner                          1/1     Running   1 (2m58s ago)   3m41s
+kubernetes-dashboard   dashboard-metrics-scraper-5dd9cbfd69-g9jcz   1/1     Running   0               87s
+kubernetes-dashboard   kubernetes-dashboard-5c5cfc8747-9942m        1/1     Running   0               87s
+
+minikube dashboard
+http://127.0.0.1:64572/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/ingress?namespace=default
