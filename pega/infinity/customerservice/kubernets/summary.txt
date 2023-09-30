@@ -79,3 +79,21 @@ kubectl get nodes
 NAME       STATUS   ROLES           AGE   VERSION
 minikube   Ready    control-plane   31m   v1.27.4
 
+Container Runtime Interface ( CRI )
+Open Container Initiative
+ - imagespec
+ - runtimespec
+ - dockershim
+   - CLI
+   - API
+   - Build
+   - Volumes
+   - Auth
+   - Security
+
+/* Containder D installation */
+https://github.com/containerd/containerd/blob/main/docs/getting-started.md
+/* nerdctl docker compatible */
+https://github.com/containerd/nerdctl
+/* crictl */
+
