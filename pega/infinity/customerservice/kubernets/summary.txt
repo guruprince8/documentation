@@ -91,7 +91,7 @@ Open Container Initiative
    - Auth
    - Security
 
-/* Containder D installation */
+/* Container D installation */
 https://github.com/containerd/containerd/blob/main/docs/getting-started.md
 /* nerdctl docker compatible */
 https://github.com/containerd/nerdctl
