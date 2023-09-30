@@ -55,3 +55,14 @@ No resources found in default namespace.
 
 minikube dashboard
 http://127.0.0.1:64572/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/ingress?namespace=default
+
+/* Kubernets Architecture */
+Node 
+Cluster
+Components
+ - API Server
+ - etcd service
+ - kubectl service
+ - Container Runtime
+ - Controller
+ - Scheduler
