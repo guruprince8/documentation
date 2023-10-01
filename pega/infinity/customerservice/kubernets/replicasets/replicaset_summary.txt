@@ -1,0 +1,25 @@
+/* kubectl apply -f replicasets/replicaset.yaml */
+replicaset.apps/myapp-replicaset created
+/* kubectl get replicaset */
+NAME                             DESIRED   CURRENT   READY   AGE
+hello-node-7579565d66            1         1         1       127m
+kubernetes-bootcamp-855d5cc575   1         1         1       3h
+myapp-replicaset                 3         3         3       99s
+/*  kubectl get replicaset myapp-replicaset */
+NAME               DESIRED   CURRENT   READY   AGE
+myapp-replicaset   3         3         3       2m14s
+/* kubectl get pods */
+NAME                                   READY   STATUS             RESTARTS       AGE
+hello-node-7579565d66-ctm5v            1/1     Running            0              129m
+kubernetes-bootcamp-855d5cc575-hrvgt   1/1     Running            0              3h1m
+my-app                                 1/1     Running            0              12h
+myapp-replicaset-bmdgk                 1/1     Running            0              3m18s
+myapp-replicaset-k7tg4                 1/1     Running            0              3m18s
+myapp-replicaset-qzn5c                 1/1     Running            0              3m18s
+nginx-2                                1/2     CrashLoopBackOff   49 (21s ago)   4h17m
+nginx-3                                1/1     Running            0              89m
+nginx4                                 1/1     Running            0              59m
+nginx5                                 1/1     Running            0              59m
+nginx6                                 1/1     Running            0              59m
+postgres                               1/1     Running            0              67m
+redis                                  1/1     Running            0              46m
