@@ -1,4 +1,5 @@
 /* kubectl apply -f redis.yml */
+/* kubectl create -f redis.yml */
 pod/redis created
 
 /* kubectl describe pods redis */
