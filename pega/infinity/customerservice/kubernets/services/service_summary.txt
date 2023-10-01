@@ -82,3 +82,28 @@ Endpoints:                10.244.0.8:8080
 Session Affinity:         None
 External Traffic Policy:  Cluster
 Events:                   <none>
+
+/* minikube ip */
+192.168.49.2
+
+/* curl http://192.168.49.2:30008 */
+^C^Z
+zsh: suspended  curl http://192.168.49.2:30008
+
+/* minikue service  */
+❌  Exiting due to MK_USAGE: You must specify service name(s) or --all
+
+/* minikube service my-service */
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | my-service |          80 | http://192.168.49.2:30008 |
+|-----------|------------|-------------|---------------------------|
+🏃  Starting tunnel for service my-service.
+|-----------|------------|-------------|------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |          URL           |
+|-----------|------------|-------------|------------------------|
+| default   | my-service |             | http://127.0.0.1:58854 |
+|-----------|------------|-------------|------------------------|
+🎉  Opening service default/my-service in default browser...
+❗  Because you are using a Docker driver on darwin, the terminal needs to be open to run it.
