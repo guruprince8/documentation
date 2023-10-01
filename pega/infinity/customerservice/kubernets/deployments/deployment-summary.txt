@@ -17,3 +17,10 @@ nginx5                                 1/1     Running            0             
 nginx6                                 1/1     Running            0               97m
 postgres                               1/1     Running            0               105m
 redis                                  1/1     Running            0               84m
+
+/* kubectl get replicaset */
+NAME                             DESIRED   CURRENT   READY   AGE
+hello-node-7579565d66            1         1         1       169m
+kubernetes-bootcamp-855d5cc575   1         1         1       3h41m
+myapp-deployment-7f5795c6bb      2         2         1       114s
+myapp-replicaset                 2         2         2       43m
