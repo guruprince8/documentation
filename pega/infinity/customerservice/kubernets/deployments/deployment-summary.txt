@@ -63,3 +63,40 @@ NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
 hello-node            1/1     1            1           172m
 kubernetes-bootcamp   1/1     1            1           3h44m
 myapp-deployment      3/3     2            3           4m37s
+
+/* kubectl describe deployment myapp-deployment */
+Name:                   myapp-deployment
+Namespace:              default
+CreationTimestamp:      Sun, 01 Oct 2023 14:17:25 -0500
+Labels:                 app=myapp
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=myapp
+Replicas:               3 desired | 2 updated | 4 total | 3 available | 1 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=myapp
+           env=production
+  Containers:
+   nginx:
+    Image:      nginx
+    Port:       <none>
+    Host Port:  <none>
+    Limits:
+      cpu:        500m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    ReplicaSetUpdated
+OldReplicaSets:  myapp-replicaset (2/2 replicas created)
+NewReplicaSet:   myapp-deployment-7f5795c6bb (2/2 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  5m47s  deployment-controller  Scaled up replica set myapp-deployment-7f5795c6bb to 2
