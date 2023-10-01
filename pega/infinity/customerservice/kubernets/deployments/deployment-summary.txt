@@ -145,3 +145,20 @@ nginx5                                 1/1     Running            0             
 nginx6                                 1/1     Running            0              110m
 postgres                               1/1     Running            0              118m
 redis                                  1/1     Running            0              97m
+
+/* kubectl rollout status deployment/myapp-deployment */
+error: deployment "myapp-deployment" exceeded its progress deadline
+/* kubectl rollout history  deployment/myapp-deployment */
+deployment.apps/myapp-deployment 
+REVISION  CHANGE-CAUSE
+0         <none>
+1         <none>
+
+/* kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1 */
+deployment.apps/myapp-deployment image update
+/* kubectl rollout history  deployment/myapp-deployment   */
+deployment.apps/myapp-deployment 
+REVISION  CHANGE-CAUSE
+0         <none>
+1         <none>
+2         <none>
