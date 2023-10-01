@@ -57,3 +57,9 @@ replicaset.apps/hello-node-7579565d66            1         1         1       170
 replicaset.apps/kubernetes-bootcamp-855d5cc575   1         1         1       3h42m
 replicaset.apps/myapp-deployment-7f5795c6bb      2         2         1       3m11s
 replicaset.apps/myapp-replicaset                 2         2         2       44m
+
+/* kubectl get deployments */
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+hello-node            1/1     1            1           172m
+kubernetes-bootcamp   1/1     1            1           3h44m
+myapp-deployment      3/3     2            3           4m37s
