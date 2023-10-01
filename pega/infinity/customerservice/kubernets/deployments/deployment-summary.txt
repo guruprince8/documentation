@@ -100,3 +100,25 @@ Events:
   Type    Reason             Age    From                   Message
   ----    ------             ----   ----                   -------
   Normal  ScalingReplicaSet  5m47s  deployment-controller  Scaled up replica set myapp-deployment-7f5795c6bb to 2
+
+/* kubectl create deployment httpd-frontend --image=http:2.4-alpine --replicas=3 */
+deployment.apps/httpd-frontend created
+/* kubectl get pods */
+NAME                                   READY   STATUS             RESTARTS         AGE
+hello-node-7579565d66-ctm5v            1/1     Running            0                178m
+httpd-frontend-68d75b9c8b-bwgsk        0/1     ErrImagePull       0                15s
+httpd-frontend-68d75b9c8b-cqsm5        0/1     ErrImagePull       0                15s
+httpd-frontend-68d75b9c8b-nk8vh        0/1     ErrImagePull       0                15s
+kubernetes-bootcamp-855d5cc575-hrvgt   1/1     Running            0                3h50m
+my-app                                 1/1     Running            0                13h
+myapp-deployment-7f5795c6bb-gdw8v      0/1     Pending            0                11m
+myapp-deployment-7f5795c6bb-tw97k      1/1     Running            0                11m
+myapp-replicaset-dfvfh                 1/1     Running            0                47m
+myapp-replicaset-k7tg4                 1/1     Running            0                52m
+nginx-2                                1/2     CrashLoopBackOff   56 (3m39s ago)   5h6m
+nginx-3                                1/1     Running            0                138m
+nginx4                                 1/1     Running            0                108m
+nginx5                                 1/1     Running            0                108m
+nginx6                                 1/1     Running            0                108m
+postgres                               1/1     Running            0                116m
+redis                                  1/1     Running            0                95m
