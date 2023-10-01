@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+# metadata
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+# spec
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 3
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: myapp
+        env: production
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
