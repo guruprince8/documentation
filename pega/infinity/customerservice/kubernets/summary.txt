@@ -159,4 +159,95 @@ pod/my-app configured
 error: error parsing pod-definition.yml: error converting YAML to JSON: yaml: line 10: found character that cannot start any token
 pod/my-app unchanged
 
+/* kubectl describe pod nginx-2 */
+Name:             nginx-2
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sun, 01 Oct 2023 09:22:09 -0500
+Labels:           env=production
+                  name=myapp
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.6
+IPs:
+  IP:  10.244.0.6
+Containers:
+  nginx:
+    Container ID:   docker://60b33826dd2742af9656cb4870a05f243baeeddbcf3409c9b0bf121c0f855e67
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:32da30332506740a2f7c34d5dc70467b7f14ec67d912703568daff790ab3f755
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 01 Oct 2023 09:22:11 -0500
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        500m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-hnf8p (ro)
+  busybox:
+    Container ID:   docker://93b0c83258e99dbfbfb896dee513c0406a081175508a689be43e56eff809fd38
+    Image:          busybox
+    Image ID:       docker-pullable://busybox@sha256:3fbc632167424a6d997e74f52b878d7cc478225cffac6bc977eedfe51c7f4e79
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sun, 01 Oct 2023 09:22:57 -0500
+      Finished:     Sun, 01 Oct 2023 09:22:57 -0500
+    Ready:          False
+    Restart Count:  3
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        500m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-hnf8p (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-hnf8p:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  82s                default-scheduler  Successfully assigned default/nginx-2 to minikube
+  Normal   Pulling    81s                kubelet            Pulling image "nginx"
+  Normal   Pulled     81s                kubelet            Successfully pulled image "nginx" in 596.362416ms (596.37875ms including waiting)
+  Normal   Created    80s                kubelet            Created container nginx
+  Normal   Started    80s                kubelet            Started container nginx
+  Normal   Pulled     79s                kubelet            Successfully pulled image "busybox" in 1.541108917s (1.541121543s including waiting)
+  Normal   Pulled     78s                kubelet            Successfully pulled image "busybox" in 508.550542ms (508.574417ms including waiting)
+  Normal   Pulled     64s                kubelet            Successfully pulled image "busybox" in 551.421833ms (551.449208ms including waiting)
+  Normal   Pulling    34s (x4 over 80s)  kubelet            Pulling image "busybox"
+  Normal   Created    34s (x4 over 79s)  kubelet            Created container busybox
+  Normal   Started    34s (x4 over 79s)  kubelet            Started container busybox
+  Normal   Pulled     34s                kubelet            Successfully pulled image "busybox" in 583.069126ms (583.099042ms including waiting)
+  Warning  BackOff    33s (x5 over 77s)  kubelet            Back-off restarting failed container busybox in pod nginx-2_default(3c06bc7f-36ce-4b33-ad14-08f9f6fac044)
 
