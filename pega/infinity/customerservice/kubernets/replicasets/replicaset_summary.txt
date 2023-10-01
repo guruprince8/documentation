@@ -23,3 +23,6 @@ nginx5                                 1/1     Running            0             
 nginx6                                 1/1     Running            0              59m
 postgres                               1/1     Running            0              67m
 redis                                  1/1     Running            0              46m
+/* kubectl delete pod myapp-replicaset-bmdgk */
+pod "myapp-replicaset-bmdgk" deleted
+Error from server (NotFound): pods "myapp-replicaset-bmdgk" not found
