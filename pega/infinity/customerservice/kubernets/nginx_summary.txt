@@ -53,3 +53,15 @@ Events:
   Normal  Pulled     107s  kubelet            Successfully pulled image "nginx" in 579.325ms (579.337ms including waiting)
   Normal  Created    107s  kubelet            Created container nginx4
   Normal  Started    107s  kubelet            Started container nginx4
+
+/* kubectl describe pods -o wide */
+NAME                                   READY   STATUS             RESTARTS         AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+hello-node-7579565d66-ctm5v            1/1     Running            0                74m     10.244.0.8    minikube   <none>           <none>
+kubernetes-bootcamp-855d5cc575-hrvgt   1/1     Running            0                126m    10.244.0.7    minikube   <none>           <none>
+my-app                                 1/1     Running            0                12h     10.244.0.5    minikube   <none>           <none>
+nginx-2                                1/2     CrashLoopBackOff   39 (2m30s ago)   3h22m   10.244.0.6    minikube   <none>           <none>
+nginx-3                                1/1     Running            0                34m     10.244.0.9    minikube   <none>           <none>
+nginx4                                 1/1     Running            0                4m27s   10.244.0.12   minikube   <none>           <none>
+nginx5                                 1/1     Running            0                4m15s   10.244.0.13   minikube   <none>           <none>
+nginx6                                 1/1     Running            0                4m9s    10.244.0.14   minikube   <none>           <none>
+postgres                               1/1     Running            0                11m     10.244.0.11   minikube   <none>           <none>
