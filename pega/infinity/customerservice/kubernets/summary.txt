@@ -921,3 +921,5 @@ kubernetes-bootcamp   NodePort       10.107.171.21   <none>        8080:30444/TC
 🎉  Opening service default/hello-node in default browser...
 ❗  Because you are using a Docker driver on darwin, the terminal needs to be open to run it.
 
+/* kubectl exec -ti hello-node-7579565d66-ctm5v -- bash */
+
