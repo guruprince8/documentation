@@ -274,3 +274,11 @@ Defaulted container "nginx" out of: nginx, busybox
 2023/10/01 14:22:11 [notice] 1#1: start worker process 32
 2023/10/01 14:22:11 [notice] 1#1: start worker process 33
 
+/* kubectl get deployments */
+No resources found in default namespace.
+/* kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 */
+deployment.apps/kubernetes-bootcamp created
+/* kubectl get deployments */
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+kubernetes-bootcamp   1/1     1            1           8
+
