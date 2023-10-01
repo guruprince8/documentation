@@ -1,0 +1,37 @@
+/* kubectl exec -ti hello-node-7579565d66-ctm5v -- bash */
+
+/* kubectl apply -f postgres.yml */
+/* kubectl logs postgres */
+Error: Database is uninitialized and superuser password is not specified.
+       You must specify POSTGRES_PASSWORD to a non-empty value for the
+       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+
+       You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+       connections without a password. This is *not* recommended.
+
+       See PostgreSQL documentation about "trust":
+       https://www.postgresql.org/docs/current/auth-trust.html
+
+/* kubectl apply -f postgres.yml */
+The Pod "postgres" is invalid: spec: Forbidden: pod updates may not change fields other than `spec.containers[*].image`,`spec.initContainers[*].image`,`spec.activeDeadlineSeconds`,`spec.tolerations` (only additions to existing tolerations),`spec.terminationGracePeriodSeconds` (allow it to be set to 1 if it was previously negative)
+  core.PodSpec{
+        Volumes:        {{Name: "kube-api-access-m4zjm", VolumeSource: {Projected: &{Sources: {{ServiceAccountToken: &{ExpirationSeconds: 3607, Path: "token"}}, {ConfigMap: &{LocalObjectReference: {Name: "kube-root-ca.crt"}, Items: {{Key: "ca.crt", Path: "ca.crt"}}}}, {DownwardAPI: &{Items: {{Path: "namespace", FieldRef: &{APIVersion: "v1", FieldPath: "metadata.namespace"}}}}}}, DefaultMode: &420}}}},
+        InitContainers: nil,
+        Containers: []core.Container{
+                {
+                        ... // 5 identical fields
+                        Ports:        nil,
+                        EnvFrom:      nil,
+-                       Env:          nil,
++                       Env:          []core.EnvVar{{Name: "POSTGRES_PASSWORD", Value: "postgres"}},
+                        Resources:    {Limits: {s"cpu": {i: {...}, s: "500m", Format: "DecimalSI"}, s"memory": {i: {...}, Format: "BinarySI"}}, Requests: {s"cpu": {i: {...}, s: "500m", Format: "DecimalSI"}, s"memory": {i: {...}, Format: "BinarySI"}}},
+                        ResizePolicy: nil,
+                        ... // 13 identical fields
+                },
+        },
+        EphemeralContainers: nil,
+        RestartPolicy:       "Always",
+        ... // 28 identical fields
+  }
+/* kubectl delete pod postgres */
+pod "postgres" deleted
