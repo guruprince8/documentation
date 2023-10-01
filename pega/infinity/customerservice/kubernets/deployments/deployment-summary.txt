@@ -122,3 +122,26 @@ nginx5                                 1/1     Running            0             
 nginx6                                 1/1     Running            0                108m
 postgres                               1/1     Running            0                116m
 redis                                  1/1     Running            0                95m
+
+/* kubectl delete deployment httpd-frontend */
+deployment.apps "httpd-frontend" deleted
+
+/* kubectl create deployment httpd-frontend --image=httpd:2.4-alpine --replicas=3 */
+NAME                                   READY   STATUS             RESTARTS       AGE
+hello-node-7579565d66-ctm5v            1/1     Running            0              3h1m
+httpd-frontend-5497fbb8f6-8v5vc        1/1     Running            0              8s
+httpd-frontend-5497fbb8f6-bb656        1/1     Running            0              8s
+httpd-frontend-5497fbb8f6-xbl62        1/1     Running            0              8s
+kubernetes-bootcamp-855d5cc575-hrvgt   1/1     Running            0              3h53m
+my-app                                 1/1     Running            0              13h
+myapp-deployment-7f5795c6bb-gdw8v      0/1     Pending            0              13m
+myapp-deployment-7f5795c6bb-tw97k      1/1     Running            0              13m
+myapp-replicaset-dfvfh                 1/1     Running            0              49m
+myapp-replicaset-k7tg4                 1/1     Running            0              54m
+nginx-2                                1/2     CrashLoopBackOff   57 (58s ago)   5h8m
+nginx-3                                1/1     Running            0              141m
+nginx4                                 1/1     Running            0              111m
+nginx5                                 1/1     Running            0              110m
+nginx6                                 1/1     Running            0              110m
+postgres                               1/1     Running            0              118m
+redis                                  1/1     Running            0              97m
