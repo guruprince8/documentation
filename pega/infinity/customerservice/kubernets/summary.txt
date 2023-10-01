@@ -756,3 +756,36 @@ Events:                   <none>
 http://127.0.0.1:53668
 curl http://127.0.0.1:53668
 Hello Kubernetes bootcamp! | Running on: kubernetes-bootcamp-855d5cc575-hrvgt | v=1
+
+/* kubectl describe deployments/kubernetes-bootcamp */
+Name:                   kubernetes-bootcamp
+Namespace:              default
+CreationTimestamp:      Sun, 01 Oct 2023 10:37:40 -0500
+Labels:                 app=kubernetes-bootcamp
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=kubernetes-bootcamp
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=kubernetes-bootcamp
+  Containers:
+   kubernetes-bootcamp:
+    Image:        gcr.io/google-samples/kubernetes-bootcamp:v1
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   kubernetes-bootcamp-855d5cc575 (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  26m   deployment-controller  Scaled up replica set kubernetes-bootcamp-855d5cc575 to 1
