@@ -1,0 +1,19 @@
+/* kubectl apply -f deployments/deployment.yaml */
+deployment.apps/myapp-deployment created
+
+/* kubectl get pods */
+NAME                                   READY   STATUS             RESTARTS        AGE
+hello-node-7579565d66-ctm5v            1/1     Running            0               167m
+kubernetes-bootcamp-855d5cc575-hrvgt   1/1     Running            0               3h40m
+my-app                                 1/1     Running            0               13h
+myapp-deployment-7f5795c6bb-gdw8v      0/1     Pending            0               24s
+myapp-deployment-7f5795c6bb-tw97k      1/1     Running            0               24s
+myapp-replicaset-dfvfh                 1/1     Running            0               36m
+myapp-replicaset-k7tg4                 1/1     Running            0               41m
+nginx-2                                1/2     CrashLoopBackOff   54 (3m9s ago)   4h55m
+nginx-3                                1/1     Running            0               127m
+nginx4                                 1/1     Running            0               97m
+nginx5                                 1/1     Running            0               97m
+nginx6                                 1/1     Running            0               97m
+postgres                               1/1     Running            0               105m
+redis                                  1/1     Running            0               84m
