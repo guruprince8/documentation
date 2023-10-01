@@ -162,3 +162,20 @@ REVISION  CHANGE-CAUSE
 0         <none>
 1         <none>
 2         <none>
+/* kubectl rollout undo deployment/myapp-deployment */
+deployment.apps/myapp-deployment rolled back
+
+/* kubectl get replicaset */
+NAME                             DESIRED   CURRENT   READY   AGE
+hello-node-7579565d66            1         1         1       3h13m
+httpd-frontend-5497fbb8f6        3         3         3       12m
+kubernetes-bootcamp-855d5cc575   1         1         1       4h6m
+myapp-deployment-7779cc5f4f      0         0         0       6m11s
+myapp-deployment-7f5795c6bb      2         2         1       26m
+myapp-replicaset                 2         2         2       67m
+/* kubectl rollout history  deployment/myapp-deployment */
+deployment.apps/myapp-deployment 
+REVISION  CHANGE-CAUSE
+0         <none>
+2         <none>
+3         <none>
