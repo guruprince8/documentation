@@ -831,3 +831,93 @@ Events:
 | storage-provisioner-gluster | minikube | disabled     | 3rd party (Gluster)            |
 | volumesnapshots             | minikube | disabled     | Kubernetes                     |
 |-----------------------------|----------|--------------|--------------------------------|
+
+/* kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080 */
+deployment.apps/hello-node created
+
+/*kubectl get deployments*/
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+hello-node            1/1     1            1           45s
+kubernetes-bootcamp   1/1     1            1           53m
+
+/* kubectl get pods */
+hello-node-7579565d66-ctm5v            1/1     Running            0                91s
+kubernetes-bootcamp-855d5cc575-hrvgt   1/1     Running            0                53m
+my-app                                 1/1     Running            0                10h
+nginx-2                                1/2     CrashLoopBackOff   25 (4m11s ago)   129m
+
+/* kubectl get events */
+LAST SEEN   TYPE      REASON              OBJECT                                      MESSAGE
+3m11s       Normal    Scheduled           pod/hello-node-7579565d66-ctm5v             Successfully assigned default/hello-node-7579565d66-ctm5v to minikube
+3m10s       Normal    Pulling             pod/hello-node-7579565d66-ctm5v             Pulling image "registry.k8s.io/e2e-test-images/agnhost:2.39"
+2m58s       Normal    Pulled              pod/hello-node-7579565d66-ctm5v             Successfully pulled image "registry.k8s.io/e2e-test-images/agnhost:2.39" in 11.686878214s (11.686887589s including waiting)
+2m58s       Normal    Created             pod/hello-node-7579565d66-ctm5v             Created container agnhost
+2m58s       Normal    Started             pod/hello-node-7579565d66-ctm5v             Started container agnhost
+3m11s       Normal    SuccessfulCreate    replicaset/hello-node-7579565d66            Created pod: hello-node-7579565d66-ctm5v
+3m11s       Normal    ScalingReplicaSet   deployment/hello-node                       Scaled up replica set hello-node-7579565d66 to 1
+55m         Normal    Scheduled           pod/kubernetes-bootcamp-855d5cc575-hrvgt    Successfully assigned default/kubernetes-bootcamp-855d5cc575-hrvgt to minikube
+55m         Normal    Pulling             pod/kubernetes-bootcamp-855d5cc575-hrvgt    Pulling image "gcr.io/google-samples/kubernetes-bootcamp:v1"
+55m         Normal    Pulled              pod/kubernetes-bootcamp-855d5cc575-hrvgt    Successfully pulled image "gcr.io/google-samples/kubernetes-bootcamp:v1" in 6.657125003s (6.657133669s including waiting)
+55m         Normal    Created             pod/kubernetes-bootcamp-855d5cc575-hrvgt    Created container kubernetes-bootcamp
+55m         Normal    Started             pod/kubernetes-bootcamp-855d5cc575-hrvgt    Started container kubernetes-bootcamp
+55m         Normal    SuccessfulCreate    replicaset/kubernetes-bootcamp-855d5cc575   Created pod: kubernetes-bootcamp-855d5cc575-hrvgt
+55m         Normal    ScalingReplicaSet   deployment/kubernetes-bootcamp              Scaled up replica set kubernetes-bootcamp-855d5cc575 to 1
+43s         Normal    Pulling             pod/nginx-2                                 Pulling image "busybox"
+5m39s       Warning   BackOff             pod/nginx-2                                 Back-off restarting failed container busybox in pod nginx-2_default(3c06bc7f-36ce-4b33-ad14-08f9f6fac044)
+
+/* kubectl config view *
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /Users/gurubrahmanadamekambaram/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Sat, 30 Sep 2023 16:39:07 CDT
+        provider: minikube.sigs.k8s.io
+        version: v1.31.2
+      name: cluster_info
+    server: https://127.0.0.1:64506
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Sat, 30 Sep 2023 16:39:07 CDT
+        provider: minikube.sigs.k8s.io
+        version: v1.31.2
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /Users/gurubrahmanadamekambaram/.minikube/profiles/minikube/client.crt
+    client-key: /Users/gurubrahmanadamekambaram/.minikube/profiles/minikube/client.key
+/* kubectl expose deployment hello-node --type=LoadBalancer --port=8080 */
+service/hello-node exposed
+/* kubectl get services */
+NAME                  TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+hello-node            LoadBalancer   10.105.194.75   <pending>     8080:32008/TCP   6s
+kubernetes            ClusterIP      10.96.0.1       <none>        443/TCP          19h
+kubernetes-bootcamp   NodePort       10.107.171.21   <none>        8080:30444/TCP   47m
+
+/* minikube service hello-node */
+|-----------|------------|-------------|---------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |            URL            |
+|-----------|------------|-------------|---------------------------|
+| default   | hello-node |        8080 | http://192.168.49.2:32008 |
+|-----------|------------|-------------|---------------------------|
+🏃  Starting tunnel for service hello-node.
+|-----------|------------|-------------|------------------------|
+| NAMESPACE |    NAME    | TARGET PORT |          URL           |
+|-----------|------------|-------------|------------------------|
+| default   | hello-node |             | http://127.0.0.1:54354 |
+|-----------|------------|-------------|------------------------|
+🎉  Opening service default/hello-node in default browser...
+❗  Because you are using a Docker driver on darwin, the terminal needs to be open to run it.
+
