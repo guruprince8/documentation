@@ -57,3 +57,59 @@ Events:
   Normal  SuccessfulCreate  24m   replicaset-controller  Created pod: myapp-replicaset-k7tg4
   Normal  SuccessfulCreate  19m   replicaset-controller  Created pod: myapp-replicaset-dfvfh
 
+/* kubectl edit  replicaset myapp-replicaset */
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"ReplicaSet","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"myapp-replicaset","namespace":"default"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"myapp"}},"template":{"metadata":{"labels":{"app":"myapp","env":"production"},"name":"nginx-10"},"spec":{"containers":[{"image":"nginx","name":"nginx","resources":{"limits":{"cpu":"500m","memory":"128Mi"}}}]}}}}
+  creationTimestamp: "2023-10-01T18:36:18Z"
+  generation: 2
+  labels:
+    app: myapp
+  name: myapp-replicaset
+  namespace: default
+  resourceVersion: "26511"
+  uid: 5cc55b1f-c32d-41ae-8912-be9aaf25b1fb
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myapp
+        env: production
+      name: nginx-10
+    spec:
+      containers:
+      - image: nginx
+        imagePullPolicy: Always
+        name: nginx
+        resources:
+          limits:
+            cpu: 500m
+            memory: 128Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 3
+  fullyLabeledReplicas: 4
+  observedGeneration: 2
+  readyReplicas: 3
+  replicas: 4
+/* kubectl scale replicaset myapp-replicaset --replicas=2 */
+replicaset.apps/myapp-replicaset scaled
+
