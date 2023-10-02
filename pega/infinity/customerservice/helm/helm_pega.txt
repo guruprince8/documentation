@@ -1,0 +1,24 @@
+/* helm repo add pega https://pegasystems.github.io/pega-helm-charts */
+"pega" has been added to your repositories
+/ * helm search repo pega */
+pega/pega           	3.7.1        	           	Pega installation on kubernetes                   
+pega/addons         	3.7.1        	1.0        	A Helm chart for Kubernetes                       
+pega/backingservices	3.7.1        	           	Helm Chart to provision the latest Search and R...
+
+/* helm inspect values pega/pega > pega.yaml */
+  
+/* helm inspect values pega/addons > addons.yaml */
+  
+/* helm inspect values pega/backingservices > backingservices.yaml */
+
+/* kubectl create namespace mypega */
+  
+/* kubectl create namespace pegaaddons */
+  
+/* kubectl create namespace pegabackingservices */
+
+/* helm install backingservices pega/backingservices --namespace pegabackingservices --values backingservices.yaml */
+
+/* helm install addons pega/addons --namespace pegaaddons --values addons.yaml */
+
+/* helm install mypega pega/pega --namespace mypega --values pega.yaml */ 
