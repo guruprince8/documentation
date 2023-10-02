@@ -1,6 +1,6 @@
 https://helm.sh/docs/intro/install/
-/* curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash */
 
+/* curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash */
 Downloading https://get.helm.sh/helm-v3.13.0-darwin-arm64.tar.gz
 Verifying checksum... Done.
 Preparing to install helm into /usr/local/bin
@@ -8,7 +8,6 @@ Password:
 helm installed into /usr/local/bin/helm
 
 /* helm *
-
 The Kubernetes package manager
 
 Common actions for Helm:
