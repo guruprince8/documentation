@@ -1,0 +1,62 @@
+/* kubectl apply -f redis.yml */
+/* kubectl create -f redis.yml */
+pod/redis created
+
+/* kubectl describe pods redis */
+Name:             redis
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sun, 01 Oct 2023 12:53:25 -0500
+Labels:           name=redis
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.15
+IPs:
+  IP:  10.244.0.15
+Containers:
+  redis:
+    Container ID:   docker://3481d6261ee50cf18327b9811e493ca84ce2fd815cc2fc9b9193df49c0309216
+    Image:          redis
+    Image ID:       docker-pullable://redis@sha256:ae51486efeea8a9b3f85542e408f79a5012d5b7fa35ae19733104ecc6992a248
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 01 Oct 2023 12:53:29 -0500
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        500m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-j4fbz (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-j4fbz:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  61s   default-scheduler  Successfully assigned default/redis to minikube
+  Normal  Pulling    60s   kubelet            Pulling image "redis"
+  Normal  Pulled     57s   kubelet            Successfully pulled image "redis" in 3.022591418s (3.022601126s including waiting)
+  Normal  Created    57s   kubelet            Created container redis
+  Normal  Started    57s   kubelet            Started container redis
