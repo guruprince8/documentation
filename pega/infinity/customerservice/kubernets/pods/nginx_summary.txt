@@ -1,0 +1,67 @@
+/* kubectl run nginx4 --image=nginx */
+pod/nginx4 created
+
+/* kubectl describe pods nginx4 */
+Name:             nginx4
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sun, 01 Oct 2023 12:39:57 -0500
+Labels:           run=nginx4
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.12
+IPs:
+  IP:  10.244.0.12
+Containers:
+  nginx4:
+    Container ID:   docker://fdb6475fcbc40ad53a48a898fd3e34f7e27b46eda442e25a2f8fbe921f062cdb
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:32da30332506740a2f7c34d5dc70467b7f14ec67d912703568daff790ab3f755
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 01 Oct 2023 12:39:58 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-b6j74 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-b6j74:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  108s  default-scheduler  Successfully assigned default/nginx4 to minikube
+  Normal  Pulling    107s  kubelet            Pulling image "nginx"
+  Normal  Pulled     107s  kubelet            Successfully pulled image "nginx" in 579.325ms (579.337ms including waiting)
+  Normal  Created    107s  kubelet            Created container nginx4
+  Normal  Started    107s  kubelet            Started container nginx4
+
+/* kubectl describe pods -o wide */
+NAME                                   READY   STATUS             RESTARTS         AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+hello-node-7579565d66-ctm5v            1/1     Running            0                74m     10.244.0.8    minikube   <none>           <none>
+kubernetes-bootcamp-855d5cc575-hrvgt   1/1     Running            0                126m    10.244.0.7    minikube   <none>           <none>
+my-app                                 1/1     Running            0                12h     10.244.0.5    minikube   <none>           <none>
+nginx-2                                1/2     CrashLoopBackOff   39 (2m30s ago)   3h22m   10.244.0.6    minikube   <none>           <none>
+nginx-3                                1/1     Running            0                34m     10.244.0.9    minikube   <none>           <none>
+nginx4                                 1/1     Running            0                4m27s   10.244.0.12   minikube   <none>           <none>
+nginx5                                 1/1     Running            0                4m15s   10.244.0.13   minikube   <none>           <none>
+nginx6                                 1/1     Running            0                4m9s    10.244.0.14   minikube   <none>           <none>
+postgres                               1/1     Running            0                11m     10.244.0.11   minikube   <none>           <none>
