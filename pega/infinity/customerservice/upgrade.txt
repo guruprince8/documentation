@@ -1,0 +1,3 @@
+/* Ref Links */
+https://docs.pega.com/bundle/keeping-current/page/keeping-current/kc/extended-support-policy.html
+https://docs.pega.com/bundle/platform/page/platform/deployment/externalization-of-services/deploying-srs.html#tsk-deploying-srs
