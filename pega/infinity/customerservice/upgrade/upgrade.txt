@@ -10,6 +10,41 @@ https://docs.pega.com/bundle/platform/page/platform/hub/platform-install-update.
 https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cloud/pega-docker-images-manage.html#cmc-docker-images-overview
 
 
+cat .kube/config
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /Users/gurubrahmanadamekambaram/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Sat, 30 Sep 2023 16:39:07 CDT
+        provider: minikube.sigs.k8s.io
+        version: v1.31.2
+      name: cluster_info
+    server: https://127.0.0.1:64506
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Sat, 30 Sep 2023 16:39:07 CDT
+        provider: minikube.sigs.k8s.io
+        version: v1.31.2
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /Users/gurubrahmanadamekambaram/.minikube/profiles/minikube/client.crt
+    client-key: /Users/gurubrahmanadamekambaram/.minikube/profiles/minikube/client.key
+
+
 /* helm repo add pega https://pegasystems.github.io/pega-helm-charts */
 "pega" has been added to your repositories
 / * helm search repo pega */
