@@ -1,1 +1,1 @@
-
+/* https://github.com/hazelcast/hazelcast-code-samples/blob/master/clients/basic/src/main/java/Client.java */
