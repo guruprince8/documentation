@@ -1,4 +1,11 @@
-docker build --platform=linux/amd64 --build-arg JAR_FILE=cache-1.0-SNAPSHOT.jar -t myorg/myapp .
+/* REF Links */
+https://docs.oracle.com/javase/tutorial/deployment/jar/view.html
+https://maven.apache.org/guides/mini/guide-configuring-plugins.html
+https://maven.apache.org/plugins/index.html
+https://docs.docker.com/engine/reference/builder/#:~:text=Docker%20can%20build%20images%20automatically,line%20to%20assemble%20an%20image.
+https://www.digitalocean.com/community/tutorials/java-socket-programming-server-client
+
+/* docker build --platform=linux/amd64 --build-arg JAR_FILE=cache-1.0-SNAPSHOT.jar -t myorg/myapp . */
 [+] Building 7.2s (7/7) FINISHED                                                                                                                                                      docker:desktop-linux
  => [internal] load .dockerignore                                                                                                                                                                     0.0s
  => => transferring context: 2B                                                                                                                                                                       0.0s
