@@ -1,1 +1,44 @@
+/* https://docs.hazelcast.com/hazelcast/5.3/getting-started/install-hazelcast */
+hz -V
+cd ~/peony/LSA/hazelcast-5.3.2
+
+bin/hz start
+
+########################################
+# JAVA=/opt/homebrew/Cellar/openjdk@17/17.0.7/libexec/openjdk.jdk/Contents/Home/bin/java
+# JAVA_OPTS=--add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED -Dhazelcast.logging.type=log4j2 -Dlog4j.configurationFile=file:/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/config/log4j2.properties -Dhazelcast.config=/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/config/hazelcast.xml -Djet.custom.lib.dir=/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/custom-lib
+# CLASSPATH=/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/lib:/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/lib/*:/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/bin/user-lib:/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/bin/user-lib/*
+########################################
+2023-10-16 23:05:50,194 [ INFO] [main] [c.h.i.c.AbstractConfigLocator]: Loading configuration '/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/config/hazelcast.xml' from System property 'hazelcast.config'
+2023-10-16 23:05:50,197 [ INFO] [main] [c.h.i.c.AbstractConfigLocator]: Using configuration file at /Users/gurubrahmanadamekambaram/Desktop/peony/LSA/hazelcast-5.3.2/config/hazelcast.xml
+2023-10-16 23:05:50,405 [ INFO] [main] [c.h.i.AddressPicker]: [LOCAL] [dev] [5.3.2] Interfaces is enabled, trying to pick one address matching to one of: [127.0.0.1, 127.0.0.1]
+2023-10-16 23:05:50,428 [ INFO] [main] [c.h.s.logo]: [127.0.0.1]:5701 [dev] [5.3.2] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+2023-10-16 23:05:50,428 [ INFO] [main] [c.h.system]: [127.0.0.1]:5701 [dev] [5.3.2] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
+2023-10-16 23:05:50,428 [ INFO] [main] [c.h.system]: [127.0.0.1]:5701 [dev] [5.3.2] Hazelcast Platform 5.3.2 (20230821 - b6cb479) starting at [127.0.0.1]:5701
+2023-10-16 23:05:50,428 [ INFO] [main] [c.h.system]: [127.0.0.1]:5701 [dev] [5.3.2] Cluster name: dev
+2023-10-16 23:05:50,428 [ INFO] [main] [c.h.system]: [127.0.0.1]:5701 [dev] [5.3.2] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documentation for Integrity Checker.
+2023-10-16 23:05:50,428 [ INFO] [main] [c.h.system]: [127.0.0.1]:5701 [dev] [5.3.2] Jet is enabled
+2023-10-16 23:05:50,541 [ INFO] [main] [c.h.i.t.TpcServerBootstrap]: [127.0.0.1]:5701 [dev] [5.3.2] TPC: disabled
+2023-10-16 23:05:50,623 [ INFO] [main] [c.h.s.security]: [127.0.0.1]:5701 [dev] [5.3.2] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations system property to see 🔒 security recommendations and the status of current config.
+2023-10-16 23:05:50,651 [ INFO] [main] [c.h.i.i.Node]: [127.0.0.1]:5701 [dev] [5.3.2] Using TCP/IP discovery
+2023-10-16 23:05:50,651 [ WARN] [main] [c.h.c.CPSubsystem]: [127.0.0.1]:5701 [dev] [5.3.2] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+2023-10-16 23:05:50,774 [ INFO] [main] [c.h.j.i.JetServiceBackend]: [127.0.0.1]:5701 [dev] [5.3.2] Setting number of cooperative threads and default parallelism to 10
+2023-10-16 23:05:50,804 [ INFO] [main] [c.h.i.d.Diagnostics]: [127.0.0.1]:5701 [dev] [5.3.2] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+2023-10-16 23:05:50,806 [ INFO] [main] [c.h.c.LifecycleService]: [127.0.0.1]:5701 [dev] [5.3.2] [127.0.0.1]:5701 is STARTING
+2023-10-16 23:05:50,827 [ INFO] [hz.lucid_neumann.cached.thread-2] [c.h.i.c.i.TcpIpJoiner]: [127.0.0.1]:5701 [dev] [5.3.2] [127.0.0.1]:5703 is added to the blacklist.
+2023-10-16 23:05:50,827 [ INFO] [hz.lucid_neumann.cached.thread-3] [c.h.i.c.i.TcpIpJoiner]: [127.0.0.1]:5701 [dev] [5.3.2] [127.0.0.1]:5702 is added to the blacklist.
+2023-10-16 23:05:51,826 [ INFO] [main] [c.h.i.c.ClusterService]: [127.0.0.1]:5701 [dev] [5.3.2] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:5701 - 7729ae7a-56f5-42b8-b7bc-5058a47a1491 this
+]
+
+2023-10-16 23:05:51,830 [ INFO] [main] [c.h.j.i.JobCoordinationService]: [127.0.0.1]:5701 [dev] [5.3.2] Jet started scanning for jobs
+2023-10-16 23:05:51,832 [ INFO] [main] [c.h.c.LifecycleService]: [127.0.0.1]:5701 [dev] [5.3.2] [127.0.0.1]:5701 is STARTED
+
 /* https://github.com/hazelcast/hazelcast-code-samples/blob/master/clients/basic/src/main/java/Client.java */
