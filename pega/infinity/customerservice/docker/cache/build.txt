@@ -1,0 +1,32 @@
+docker build --platform=linux/amd64 --build-arg JAR_FILE=cache-1.0-SNAPSHOT.jar -t myorg/myapp .
+[+] Building 7.2s (7/7) FINISHED                                                                                                                                                      docker:desktop-linux
+ => [internal] load .dockerignore                                                                                                                                                                     0.0s
+ => => transferring context: 2B                                                                                                                                                                       0.0s
+ => [internal] load build definition from Dockerfile                                                                                                                                                  0.0s
+ => => transferring dockerfile: 267B                                                                                                                                                                  0.0s
+ => [internal] load metadata for docker.io/library/eclipse-temurin:17-jdk-alpine                                                                                                                      1.0s
+ => [internal] load build context                                                                                                                                                                     0.0s
+ => => transferring context: 2.51kB                                                                                                                                                                   0.0s
+ => [1/2] FROM docker.io/library/eclipse-temurin:17-jdk-alpine@sha256:fe702d6a9b2d0855f29154512358cd5c0c866b8b16544589e254a97743304d1a                                                                6.0s
+ => => resolve docker.io/library/eclipse-temurin:17-jdk-alpine@sha256:fe702d6a9b2d0855f29154512358cd5c0c866b8b16544589e254a97743304d1a                                                                0.0s
+ => => sha256:fe702d6a9b2d0855f29154512358cd5c0c866b8b16544589e254a97743304d1a 320B / 320B                                                                                                            0.0s
+ => => sha256:01f50a010d8985b7bf95cb1d49fde7a7ef4dce27efeca3d1d097162a0321ac87 1.37kB / 1.37kB                                                                                                        0.0s
+ => => sha256:5099a1e5b5ad87ae8e82901e378faaad18d1c117dce19c80a18e1bd8c54f8bab 4.64kB / 4.64kB                                                                                                        0.0s
+ => => sha256:96526aa774ef0126ad0fe9e9a95764c5fc37f409ab9e97021e7b4775d82bf6fa 3.40MB / 3.40MB                                                                                                        1.0s
+ => => sha256:34e4092d737c5d0c601ddadd8d075b756e55cc717065ae83683571965c2117a9 9.28MB / 9.28MB                                                                                                        0.6s
+ => => sha256:915fe362f7834d55d0629bc87900106e436777183710296be59a773b2b923c43 144.10MB / 144.10MB                                                                                                    4.7s
+ => => sha256:10b027806bac1630d9efcca8bfb815e52ac2229cf46533b8a8635f26c9953328 175B / 175B                                                                                                            0.7s
+ => => sha256:ece0488f1c6ac8f5bb7dcdc54b476499c3cc3d295b17785db90dc555692fe24e 733B / 733B                                                                                                            0.9s
+ => => extracting sha256:96526aa774ef0126ad0fe9e9a95764c5fc37f409ab9e97021e7b4775d82bf6fa                                                                                                             0.1s
+ => => extracting sha256:34e4092d737c5d0c601ddadd8d075b756e55cc717065ae83683571965c2117a9                                                                                                             0.4s
+ => => extracting sha256:915fe362f7834d55d0629bc87900106e436777183710296be59a773b2b923c43                                                                                                             1.2s
+ => => extracting sha256:10b027806bac1630d9efcca8bfb815e52ac2229cf46533b8a8635f26c9953328                                                                                                             0.0s
+ => => extracting sha256:ece0488f1c6ac8f5bb7dcdc54b476499c3cc3d295b17785db90dc555692fe24e                                                                                                             0.0s
+ => [2/2] COPY cache-1.0-SNAPSHOT.jar app.jar                                                                                                                                                         0.1s
+ => exporting to image                                                                                                                                                                                0.0s
+ => => exporting layers                                                                                                                                                                               0.0s
+ => => writing image sha256:34beb37eb3c3afeb1a4d755e0969869be9e318365b07d7a11912638146035bb4                                                                                                          0.0s
+ => => naming to docker.io/myorg/myapp                                                                                                                                                                0.0s
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
