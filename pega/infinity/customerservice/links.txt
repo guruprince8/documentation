@@ -1,0 +1,2 @@
+/* Login Screen Customization */
+https://docs-previous.pega.com/user-experience/86/editing-source-html-your-login-screen
