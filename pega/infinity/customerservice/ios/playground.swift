@@ -85,3 +85,41 @@ default:
     print("Everything tastes good in soup.")
 
 }
+
+let interestingNumbers = [
+    "primes":[2, 3, 5, 7, 11, 13],
+    "fibinocci":[1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+for(_,numbers) in interestingNumbers {
+    for number in numbers {
+        if ( number > largest ){
+            largest = number
+        }
+    }
+}
+print(largest)
+
+func greet(person:String,day:String)-> String {
+    return "Hello \(person), today is \(day)"
+}
+greet(person: "Guru", day: "Monday")
+
+func calculateStatistics(scores:[Int])->(min:Int,max:Int,sum:Int){
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    for score in scores {
+        if score > max {
+            max = score
+        }
+        if score < min {
+            min = score
+        }
+        sum+=score
+    }
+    return (min,max,sum)
+}
+let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
+
