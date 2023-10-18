@@ -1,2 +1,5 @@
 /* Login Screen Customization */
 https://docs-previous.pega.com/user-experience/86/editing-source-html-your-login-screen
+
+/* Java Injection */
+https://docs-previous.pega.com/security/87/configuring-java-injection-check?
