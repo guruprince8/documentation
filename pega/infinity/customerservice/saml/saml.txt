@@ -5,3 +5,4 @@ https://www.eclipse.org/downloads/packages/release/2023-03/r
 https://www.jetbrains.com/help/idea/enabling-web-application-support.html
 
 cd /Users/gurubrahmanadamekambaram/eclipse/jee-2023-09
+open Eclipse.app
