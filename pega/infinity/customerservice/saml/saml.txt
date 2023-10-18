@@ -1,0 +1,7 @@
+/* Links */
+https://maven.apache.org/guides/introduction/introduction-to-archetypes.html#:~:text=In%20short%2C%20Archetype%20is%20a,means%20of%20generating%20Maven%20projects.
+https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html
+https://www.eclipse.org/downloads/packages/release/2023-03/r
+https://www.jetbrains.com/help/idea/enabling-web-application-support.html
+
+cd /Users/gurubrahmanadamekambaram/eclipse/jee-2023-09
