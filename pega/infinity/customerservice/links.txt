@@ -3,3 +3,7 @@ https://docs-previous.pega.com/user-experience/86/editing-source-html-your-login
 
 /* Java Injection */
 https://docs-previous.pega.com/security/87/configuring-java-injection-check?
+
+/* Authentication */
+https://docs.pega.com/bundle/platform-88/page/platform/hub/pega-platform-overview.html
+https://docs.pega.com/bundle/platform-88/page/platform/security/test-login-authentication-service.html
