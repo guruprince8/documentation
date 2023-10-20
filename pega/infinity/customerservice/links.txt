@@ -10,3 +10,8 @@ https://docs.pega.com/bundle/platform-88/page/platform/security/test-login-authe
 
 /* Alerts */
 https://docs.pega.com/bundle/alerts/page/platform/alerts/alerts-overview.html
+
+/* Constellation */
+https://docs.pega.com/bundle/platform/page/platform/user-experience/designing-with-constellation.html
+https://docs.pega.com/bundle/constellation-dx-components-88/page/constellation-dx-components/custom-components/custom-components-cosmos-react.html
+https://docs.pega.com/bundle/constellation-dx-components-88/page/constellation-dx-components/custom-components/videos.html
