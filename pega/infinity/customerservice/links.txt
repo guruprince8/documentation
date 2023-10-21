@@ -22,3 +22,6 @@ https://support.pega.com/system/files/attachments/reply/2021-06/how%20to%20pull%
 docker login pega-docker.downloads.pega.com
 docker pull pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246
 curl -u reg-67708:AKCp8pQveVBjZqagL8iFe6RY56iNqZDUXmw2Wa5aKTJacWtKoXzkT6fQptCYNY5S3emJeo9mP https://pega-docker.downloads.pega.com/v2/_catalog
+
+https://academy.pega.com/module/best-practices-pega-constellation-design-system/v2/in/63791
+https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cloud/pega-docker-images-manage.html
