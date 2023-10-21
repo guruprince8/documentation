@@ -39,3 +39,13 @@ curl --location 'https://pega-docker.downloads.pega.com/v2/constellation-appstat
 --header 'Authorization: Basic cmVnLTY3NzA4OkFLQ3A4cFF2ZVZCalpxYWdMOGlGZTZSWTU2aU5xWkRVWG13MldhNWFLVEphY1d0S29YemtUNmZRcHRDWU5ZNVMzZW1KZW85bVA='
 
 docker pull pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.5.0-20231012160646
+
+docker run -p 3443:3443 -v /Users/gurubrahmanadamekambaram/Desktop/peony/LSA/pega/installations/23/cs/apache-tomcat-9.0.74/certs:/host_folder --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.5.0-20231012160646 port=3443 root=/usr/src/app/dist urlPath=/c11n-appstatic httpsKey=/host_folder/tomcat.key httpsCert=/host_folder/tomcat.crt
+
+> constellation-app-static@0.0.1 start
+> node src/index.js urlPath=/c11n-appstatic root=../dist root=dist port=3443 root=/usr/src/app/dist urlPath=/c11n-appstatic httpsKey=/host_folder/tomcat.key httpsCert=/host_folder/tomcat.crt
+
+INFO: 1697916841791 19 Sat, 21 Oct 2023 19:34:01 GMT index.js: 
+INFO: 1697916841826 cli-servicestart.start(/usr/src/app/dist, 3443, /c11n-appstatic, cnr=false, svcUrls={"cdnUrl":null,"msgSvcUrl":null,"mcsUrl":"http://model-calculation-service-core.model-calculation-service-core.svc.cluster.local"}, httpsKey=/host_folder/tomcat.key, httpsCert=/host_folder/tomcat.crt, storageServiceAssets={"storageServiceEndpoint":null,"c11nServiceGUID":null,"authClientID":null,"authServiceEndpoint":null,"authServiceSecretARN":null,"authServiceSecret":null,"allowedScopes":null}), uasUrl: http://unified-authentication-service.uas:443/uas/api/v1/oauth2/jwks, nginxUrl: null 
+INFO: 1697916842154 ConstellationUI service (HTTPS): listening on port 3443, static root=/usr/src/app/dist, url path=/c11n-appstatic 
+
