@@ -28,6 +28,9 @@ https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cl
 https://docs.pega.com/bundle/constellation-dx-components-88/page/constellation-dx-components/custom-components/videos.html
 https://docs.pega.com/bundle/dx-api/page/platform/dx-api/dx-api-version-2-con.html
 https://docs.pega.com/bundle/pcore-pconnect/page/pcore-pconnect-public-apis/api/using-pcore-pconnect-public-apis.html
+https://support.pega.com/system/files/attachments/discussion/2023-03/CLSA%20webinar%20-%20LeasePlan%20-%20Constellation%20and%20modern%20Pega%20development.pdf
+https://support.pega.com/discussion/clsa-community-meetup-leaseplan-low-code-enterprise-development-using-constellation
+https://support.pega.com/discussion/clsa-community-meetup-leaseplan-low-code-enterprise-development-using-constellation
 
 /* Docker CURLS */
 docker login pega-docker.downloads.pega.com
