@@ -24,7 +24,10 @@ https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cl
 https://docs-previous.pega.com/user-experience/85/installing-cosmos-react-ui-using-docker
 https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cloud/pega-docker-images-manage.html
 https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cloud/pega-kubernetes-architecture.html#deploy-constellation-service
+
+https://docs.pega.com/bundle/constellation-dx-components-88/page/constellation-dx-components/custom-components/videos.html
 https://docs.pega.com/bundle/dx-api/page/platform/dx-api/dx-api-version-2-con.html
+https://docs.pega.com/bundle/pcore-pconnect/page/pcore-pconnect-public-apis/api/using-pcore-pconnect-public-apis.html
 
 /* Docker CURLS */
 docker login pega-docker.downloads.pega.com
