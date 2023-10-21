@@ -19,9 +19,22 @@ https://documents.constellation.pega.io/static/88/introduction.html
 https://documents.constellation.pega.io/static/88/constellation-appstatic-service-docker.html
 https://docs-previous.pega.com/user-experience/87/configuring-docker-authentication
 https://support.pega.com/system/files/attachments/reply/2021-06/how%20to%20pull%20constellation%20docker%20container%20image.pdf
+https://academy.pega.com/module/best-practices-pega-constellation-design-system/v2/in/63791
+https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cloud/pega-docker-images-manage.html
+https://docs-previous.pega.com/user-experience/85/installing-cosmos-react-ui-using-docker
+https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cloud/pega-docker-images-manage.html
+
+/* Docker CURLS */
 docker login pega-docker.downloads.pega.com
 docker pull pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246
 curl -u reg-67708:AKCp8pQveVBjZqagL8iFe6RY56iNqZDUXmw2Wa5aKTJacWtKoXzkT6fQptCYNY5S3emJeo9mP https://pega-docker.downloads.pega.com/v2/_catalog
+curl --location 'https://pega-docker.downloads.pega.com/v2/_catalog' \
+--header 'Authorization: Basic cmVnLTY3NzA4OkFLQ3A4cFF2ZVZCalpxYWdMOGlGZTZSWTU2aU5xWkRVWG13MldhNWFLVEphY1d0S29YemtUNmZRcHRDWU5ZNVMzZW1KZW85bVA='
 
-https://academy.pega.com/module/best-practices-pega-constellation-design-system/v2/in/63791
-https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cloud/pega-docker-images-manage.html
+curl --location 'https://pega-docker.downloads.pega.com/v2/constellationui/service/tags/list' \
+--header 'Authorization: Basic cmVnLTY3NzA4OkFLQ3A4cFF2ZVZCalpxYWdMOGlGZTZSWTU2aU5xWkRVWG13MldhNWFLVEphY1d0S29YemtUNmZRcHRDWU5ZNVMzZW1KZW85bVA='
+
+curl --location 'https://pega-docker.downloads.pega.com/v2/constellation-appstatic-service/docker-image/tags/list' \
+--header 'Authorization: Basic cmVnLTY3NzA4OkFLQ3A4cFF2ZVZCalpxYWdMOGlGZTZSWTU2aU5xWkRVWG13MldhNWFLVEphY1d0S29YemtUNmZRcHRDWU5ZNVMzZW1KZW85bVA='
+
+pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.5.0-20231012160646
