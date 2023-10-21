@@ -37,4 +37,4 @@ curl --location 'https://pega-docker.downloads.pega.com/v2/constellationui/servi
 curl --location 'https://pega-docker.downloads.pega.com/v2/constellation-appstatic-service/docker-image/tags/list' \
 --header 'Authorization: Basic cmVnLTY3NzA4OkFLQ3A4cFF2ZVZCalpxYWdMOGlGZTZSWTU2aU5xWkRVWG13MldhNWFLVEphY1d0S29YemtUNmZRcHRDWU5ZNVMzZW1KZW85bVA='
 
-pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.5.0-20231012160646
+docker pull pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.5.0-20231012160646
