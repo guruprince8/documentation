@@ -32,6 +32,7 @@ https://support.pega.com/system/files/attachments/discussion/2023-03/CLSA%20webi
 https://support.pega.com/discussion/clsa-community-meetup-leaseplan-low-code-enterprise-development-using-constellation
 https://support.pega.com/discussion/clsa-community-meetup-leaseplan-low-code-enterprise-development-using-constellation
 https://support.pega.com/discussion/clsa-community-meetup-whats-new-88-ui-ux-and-insights-december-2022
+https://docs.pega.com/bundle/constellation-sdk/page/constellation-sdks/sdks/whats-new-sdk.html
 
 /* Docker CURLS */
 docker login pega-docker.downloads.pega.com
