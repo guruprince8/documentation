@@ -57,3 +57,83 @@ INFO: 1697916841791 19 Sat, 21 Oct 2023 19:34:01 GMT index.js:
 INFO: 1697916841826 cli-servicestart.start(/usr/src/app/dist, 3443, /c11n-appstatic, cnr=false, svcUrls={"cdnUrl":null,"msgSvcUrl":null,"mcsUrl":"http://model-calculation-service-core.model-calculation-service-core.svc.cluster.local"}, httpsKey=/host_folder/tomcat.key, httpsCert=/host_folder/tomcat.crt, storageServiceAssets={"storageServiceEndpoint":null,"c11nServiceGUID":null,"authClientID":null,"authServiceEndpoint":null,"authServiceSecretARN":null,"authServiceSecret":null,"allowedScopes":null}), uasUrl: http://unified-authentication-service.uas:443/uas/api/v1/oauth2/jwks, nginxUrl: null 
 INFO: 1697916842154 ConstellationUI service (HTTPS): listening on port 3443, static root=/usr/src/app/dist, url path=/c11n-appstatic 
 
+/* https://docs.pega.com/bundle/constellation-dx-components-88/page/constellation-dx-components/custom-components/initialize-project.html */ 
+npx @pega/custom-dx-components@~8.8 init
+ @pega/custom-dx-components@8.8.20
+Ok to proceed? (y) y
+npm WARN deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+? Enter Project name (required) mycustomcomponents
+? Enter Organization name (required) customorg
+? Version 1.0.0
+? Description This project is intended to create and publish a custom component
+? Git repository url (optional) 
+? Author Guru
+  ✔ Creating a new custom component project in /Users/gurubrahmanadamekambaram/Desktop/peony/LSA/react/mycustomcomponents
+  ✔ Create gitignore
+  ✔ Initialize git
+  ✔ Installing dependencies. This will take a couple of minutes.
+  ✔ Installing tasks dependencies
+  ✖ Installing quick run
+    → npm ERR!     /Users/gurubrahmanadamekambaram/.npm/_logs/2023-10-22T00_12_41_191Z-debug-0.log
+ListrError: Something went wrong
+    at /Users/gurubrahmanadamekambaram/.npm/_npx/730c774d56030319/node_modules/listr/index.js:102:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async default (file:///Users/gurubrahmanadamekambaram/.npm/_npx/730c774d56030319/node_modules/@pega/custom-dx-components/src/tasks/init/index.js:140:3) {
+  errors: [
+    Error: Command failed: npm i -g npm-quick-run
+    npm ERR! code EACCES
+    npm ERR! syscall mkdir
+    npm ERR! path /usr/local/lib/node_modules/npm-quick-run
+    npm ERR! errno -13
+    npm ERR! Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/npm-quick-run'
+    npm ERR!  [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/npm-quick-run'] {
+    npm ERR!   errno: -13,
+    npm ERR!   code: 'EACCES',
+    npm ERR!   syscall: 'mkdir',
+    npm ERR!   path: '/usr/local/lib/node_modules/npm-quick-run'
+    npm ERR! }
+    npm ERR! 
+    npm ERR! The operation was rejected by your operating system.
+    npm ERR! It is likely you do not have the permissions to access this file as the current user
+    npm ERR! 
+    npm ERR! If you believe this might be a permissions issue, please double-check the
+    npm ERR! permissions of the file and its containing directories, or try running
+    npm ERR! the command again as root/Administrator.
+    
+    npm ERR! A complete log of this run can be found in:
+    npm ERR!     /Users/gurubrahmanadamekambaram/.npm/_logs/2023-10-22T00_12_41_191Z-debug-0.log
+    
+        at ChildProcess.exithandler (node:child_process:419:12)
+        at ChildProcess.emit (node:events:513:28)
+        at maybeClose (node:internal/child_process:1091:16)
+        at ChildProcess._handle.onexit (node:internal/child_process:302:5) {
+      code: 243,
+      killed: false,
+      signal: null,
+      cmd: 'npm i -g npm-quick-run',
+      stdout: '',
+      stderr: 'npm ERR! code EACCES\n' +
+        'npm ERR! syscall mkdir\n' +
+        'npm ERR! path /usr/local/lib/node_modules/npm-quick-run\n' +
+        'npm ERR! errno -13\n' +
+        "npm ERR! Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/npm-quick-run'\n" +
+        "npm ERR!  [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/npm-quick-run'] {\n" +
+        'npm ERR!   errno: -13,\n' +
+        "npm ERR!   code: 'EACCES',\n" +
+        "npm ERR!   syscall: 'mkdir',\n" +
+        "npm ERR!   path: '/usr/local/lib/node_modules/npm-quick-run'\n" +
+        'npm ERR! }\n' +
+        'npm ERR! \n' +
+        'npm ERR! The operation was rejected by your operating system.\n' +
+        'npm ERR! It is likely you do not have the permissions to access this file as the current user\n' +
+        'npm ERR! \n' +
+        'npm ERR! If you believe this might be a permissions issue, please double-check the\n' +
+        'npm ERR! permissions of the file and its containing directories, or try running\n' +
+        'npm ERR! the command again as root/Administrator.\n' +
+        '\n' +
+        'npm ERR! A complete log of this run can be found in:\n' +
+        'npm ERR!     /Users/gurubrahmanadamekambaram/.npm/_logs/2023-10-22T00_12_41_191Z-debug-0.log\n'
+    }
+  ],
+  context: [Object: null prototype] {}
+}
