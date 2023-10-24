@@ -1,5 +1,0 @@
--- alternatives --list 
--- sudo alternatives --config java
--- sudo alternatives --config javac
--- alternatives --display java | grep 'family java-11-openjdk' | cut -d' ' -f1
--- sudo alternatives --config java
