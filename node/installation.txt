@@ -1,8 +1,0 @@
-/* RHEL 8 Installation */
-https://nodejs.org/en/download/package-manager/#centos-fedora-and-red-hat-enterprise-linux
--- install development tools
-1. dnf groupinstall "Development Tools" 
-dnf module list nodejs
-dnf module install nodejs:12
-dnf module install nodejs:16
-
