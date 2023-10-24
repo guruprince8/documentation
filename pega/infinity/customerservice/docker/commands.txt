@@ -1,5 +1,0 @@
-docker build -t myorg/myapp .  --platform=linux/amd64
-docker run -p 8081:8080 myorg/myapp
-
-lsof -i -n -P | grep TCP
-kill 1 ( process id )
