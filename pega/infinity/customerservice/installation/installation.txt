@@ -1,0 +1,168 @@
+# Pega Customer Service Infinity Installation
+https://docs.pega.com/bundle/customer-service-financial/page/customer-service-financial/hub/customer-service-financial-get-started.html
+https://docs.pega.com/bundle/platform/page/platform/hub/platform-install-update.html
+https://docs.pega.com/bundle/platform/page/platform/deployment/platform-support-guide/platform-support-guide.html
+
+/* schema set up */
+
+/* Data Schema */
+
+-- SCHEMA: data_23
+
+-- DROP SCHEMA IF EXISTS data_23 ;
+
+CREATE SCHEMA IF NOT EXISTS data_23
+    AUTHORIZATION postgres;
+
+GRANT ALL ON SCHEMA data_23 TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA data_23
+GRANT ALL ON TABLES TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA data_23
+GRANT ALL ON SEQUENCES TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA data_23
+GRANT EXECUTE ON FUNCTIONS TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA data_23
+GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
+
+/* Rules Schema */
+-- SCHEMA: rules_23
+
+-- DROP SCHEMA IF EXISTS rules_23 ;
+
+CREATE SCHEMA IF NOT EXISTS rules_23
+    AUTHORIZATION postgres;
+
+GRANT ALL ON SCHEMA rules_23 TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA rules_23
+GRANT ALL ON TABLES TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA rules_23
+GRANT ALL ON SEQUENCES TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA rules_23
+GRANT EXECUTE ON FUNCTIONS TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA rules_23
+GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
+
+/* Customer Schema */
+
+-- SCHEMA: customer_23
+
+-- DROP SCHEMA IF EXISTS customer_23 ;
+
+CREATE SCHEMA IF NOT EXISTS customer_23
+    AUTHORIZATION postgres;
+
+GRANT ALL ON SCHEMA customer_23 TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA customer_23
+GRANT ALL ON TABLES TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA customer_23
+GRANT ALL ON SEQUENCES TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA customer_23
+GRANT EXECUTE ON FUNCTIONS TO postgres WITH GRANT OPTION;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA customer_23
+GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
+
+/* Kafka Startup */
+https://docs-previous.pega.com/decision-management/87/configuring-external-kafka-stream-service
+https://hevodata.com/learn/install-kafka-on-mac/
+cd ~/Desktop/peony/LSA/kafka/kafka_2.12-3.5.1
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
+$ bin/kafka-server-start.sh config/server.properties
+
+cd ~/Desktop/peony/LSA/pega/installations/23/cs/apache-tomcat-9.0.74
+sh bin/startup.sh
+tail -f  work/Catalina/localhost/prweb/ECRMAPI.log
+
+/* Constellation URL */
+https://documents.constellation.pega.io/static/88/introduction.html
+https://documents.constellation.pega.io/static/88/constellation-appstatic-service-docker.html
+https://docs-previous.pega.com/user-experience/87/configuring-docker-authentication
+https://support.pega.com/system/files/attachments/reply/2021-06/how%20to%20pull%20constellation%20docker%20container%20image.pdf
+
+docker login pega-docker.downloads.pega.com
+docker pull pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246
+curl -u reg-67708:AKCp8pQveVBjZqagL8iFe6RY56iNqZDUXmw2Wa5aKTJacWtKoXzkT6fQptCYNY5S3emJeo9mP https://pega-docker.downloads.pega.com/v2/_catalog
+
+/* CERT & Key Generation */
+keytool -list -v -keystore ~/Desktop/peony/LSA/pega/installations/23/cs/apache-tomcat-9.0.74/tomcat.jks
+keytool -importkeystore -srckeystore tomcat.jks -destkeystore tomcat.p12 -deststoretype PKCS12
+openssl pkcs12 -in tomcat.p12 -nokeys -out tomcat.crt
+openssl pkcs12 -in tomcat.p12 -nocerts -nodes -out tomcat.key
+
+docker run -p 3000:3000 --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3000 root=/usr/src/app/dist urlPath=/c11n-appstatic
+
+
+docker run -p 3443:3443 -v /usr/abc/certs:/host_folder --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3443 root=/usr/src/app/dist urlPath=/c11n-appstatic httpsKey=afile.key httpsCert=bfile.cert
+
+/* actual */
+docker run -p 3443:3443 -v /Users/gurubrahmanadamekambaram/Desktop/peony/LSA/pega/installations/23/cs/apache-tomcat-9.0.74:/host_folder --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3443 root=/usr/src/app/dist urlPath=/c11n-appstatic httpsKey=tomcat.key httpsCert=tomcat.crt logLevel=info
+
+
+docker run -p 3443:3443 -v /Users/gurubrahmanadamekambaram/Desktop/peony/LSA/pega/installations/23/cs/apache-tomcat-9.0.74/certs:/host_folder --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3443 root=/usr/src/app/dist urlPath=/c11n-appstatic httpsKey=/host_folder/tomcat.key httpsCert=/host_folder/tomcat.crt
+
+/* worked */
+docker run -p 3443:3443 -v ~/Desktop/peony/LSA/pega/installations/23/cs/apache-tomcat-9.0.74/certs:/host_folder --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3443 root=/usr/src/app/dist urlPath=/c11n-appstatic logLevel=info
+
+docker run -p 3000:3000 -v /someexternaldrive:/usr/src/app/dist/customers --name c11n-appstatic pega-docker.downloads.pega.com/constellation-appstatic-service/docker-image:1.0.9-20230111194246 port=3000 root=/usr/src/app/dist urlPath=/c11n-appstatic
+
+curl http://localhost:3000/c11n-appstatic/v860/ping
+curl http://localhost:3000/c11n-appstatic/v860/healthcheck
+
+
+
+/ Install Common Application */
+https://docs.pega.com/bundle/common-data-model/page/common-data-model/install-update-adoption/import-application.html
+Media\Rules\Common.jar
+Media\Rules\Common-FinancialServices.jar
+Media\ResourceKit\CommonReferenceData.jar
+Media\ResourceKit\CommonFSReferenceData.jar
+
+/* Installing Pega Foundation For Financial Services */
+https://docs.pega.com/bundle/foundation-financial/page/pega-foundation-for-financial-services/install-upgrade/pffs-install-upgrade-app-1.html
+\Rules\PegaFFS_Int.jar
+\Rules\PegaFFS.jar
+\Rules\PegaFFS_Sample.jar
+\Rules\PegaFFS_Schema.jar
+\Rules\PegaFFS_DataInstances.jar
+\SampleData\PegaFFS_SampleSchema.jar
+\SampleData\PegaFFS_SampleDataInstances.jar
+\SampleData\PegaFFS_SnapSchema.jar
+\SampleData\PegaFFS_SnapDataInstances.jar
+
+/* Installing PDFS application */
+https://docs.pega.com/bundle/foundation-financial/page/pega-foundation-for-financial-services/pdfs-install-upgrade/install-application.html
+\ResourceKit\PDFS\Rules\PegaPDFS.jar
+\ResourceKit\PDFS\rules\PegaPDFS_Implementation.jar
+\ResourceKit\PDFS\SampleData\PegaPDFSSampleProducts.jar
+\ResourceKit\PDFS\SampleData\PegaPDFSSampleObjects.jar
+
+/* Installing CRM Application */
+https://docs.pega.com/bundle/customer-service/page/customer-service/install-update-adoption/import-application-file-1.html
+\Rules\CustomerService-Cases.jar
+\Rules\PegaCRM.jar
+\Rules\PegaCRM_Patch.jar
+\SampleDB\PegaCRMSample_DDL.jar
+\SampleDB\PegaCRMSample_DML.jar
+\SampleDB\KMSample\KMSampleData.jar
+
+/* Istalling CRM FS */
+https://docs.pega.com/bundle/customer-service-financial/page/customer-service/install-update-adoption/install-update-cs-apps-1.html
+\Rules\CustomerService-Cases-FS.jar
+\Rules\PegaCRMFS.jar
+\SampleData\PegaCRMFSSampleData.jar
+\SampleData\PegaCRMFSSampleRules.jar
+\SampleData\PegaCRMFSKMSampleContent.jar
+
+
+
