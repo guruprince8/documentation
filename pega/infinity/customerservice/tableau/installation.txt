@@ -1,4 +1,0 @@
-/* Ref Links */
-https://public.tableau.com/app/discover
-https://www.artofvisualization.com/pages/tableau
-https://www.superdatascience.com/pages/tableau
