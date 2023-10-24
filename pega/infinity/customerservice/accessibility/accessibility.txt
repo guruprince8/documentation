@@ -1,0 +1,4 @@
+/* Accessability */
+https://design.pega.com/design/accessibility/
+https://docs.pega.com/bundle/platform/page/platform/user-experience/accessibility-standards.html
+https://www.w3.org/WAI/
