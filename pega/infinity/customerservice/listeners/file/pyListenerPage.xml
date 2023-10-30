@@ -1,0 +1,111 @@
+<pagedata>
+<pyListenerName>ProcessLoanRequest</pyListenerName>
+<pySourceNameMask>*.xml</pySourceNameMask>
+<pyJavaClassName>com.pega.pegarules.services.file.FileListener</pyJavaClassName>
+<pxUpdateSystemID>pega</pxUpdateSystemID>
+<pyClassName/>
+<pxUpdateDateTime>20231030T225444.093 GMT</pxUpdateDateTime>
+<pyProcessEmptyFiles>true</pyProcessEmptyFiles>
+<pyGenerateReport>false</pyGenerateReport>
+<pyReportSourceProperty>$XML</pyReportSourceProperty>
+<pxMoveImportOperName/>
+<pyServicePackage>lsa</pyServicePackage>
+<pySourceLocation>/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/XML/pega/88</pySourceLocation>
+<pyCleanupFileExtension/>
+<pyOnIdleActivity/>
+<pyUsage>Process Loan Request</pyUsage>
+<pyBatchLoginID/>
+<pyRequeue/>
+<pyAttemptRecovery>false</pyAttemptRecovery>
+<pyCleanupFileOperation>2</pyCleanupFileOperation>
+<pxCreateDateTime>20231030T225358.017 GMT</pxCreateDateTime>
+<pyTransacted>false</pyTransacted>
+<pyRuleSet/>
+<pyResourceNameResolution>JNDIName</pyResourceNameResolution>
+<pyIgnoreCase>false</pyIgnoreCase>
+<pyConcurrentThreads>1</pyConcurrentThreads>
+<pxInsName>PROCESSLOANREQUEST</pxInsName>
+<pxSaveDateTime>20231030T225444.143 GMT</pxSaveDateTime>
+<pyFormPost/>
+<pyIsTagged>true</pyIsTagged>
+<pyNodesEnabled>true</pyNodesEnabled>
+<pyPollingInterval>60</pyPollingInterval>
+<pzInsKey>DATA-ADMIN-CONNECT-FILELISTENER PROCESSLOANREQUEST</pzInsKey>
+<pyTemplate/>
+<pyLockTempFilename>false</pyLockTempFilename>
+<pyRemoteLogPort/>
+<pySystemName/>
+<pySPRuleSetName/>
+<pxInsId/>
+<pyStartupOption>AllNodes</pyStartupOption>
+<pyMaxRetries>3</pyMaxRetries>
+<pyListenerType>File</pyListenerType>
+<pyReportFileName>obsolete</pyReportFileName>
+<pyRuleSetVersion/>
+<pyTemplateDisplayText/>
+<pyIdleClassName/>
+<pyBatchLoginPassword/>
+<pyReportStream>obsolete</pyReportStream>
+<pyServiceClass>v1</pyServiceClass>
+<pyReprocessErrors>true</pyReprocessErrors>
+<pyIgnoreDuplicates>false</pyIgnoreDuplicates>
+<pxUpdateOpName>Gurubrahmanandam Ekambaram</pxUpdateOpName>
+<pyReportSourcePage>LogServiceFile</pyReportSourcePage>
+<pyWindowTitle/>
+<pxUpdateOperator>B103134</pxUpdateOperator>
+<pySSLProtocolVersion>TLSv1.2</pySSLProtocolVersion>
+<pxMoveFromSystem/>
+<pyServiceMethod>ProcessLoanRequest</pyServiceMethod>
+<pyErrorFileOperation>3</pyErrorFileOperation>
+<pyErrorFileExtension>err</pyErrorFileExtension>
+<pyDescription>Process Loan Request</pyDescription>
+<pyIdleActivityName/>
+<pxMoveImportOperId/>
+<pyRemoteLogHost/>
+<pyReportFileExtension>rpt</pyReportFileExtension>
+<pyTransmissionProlog/>
+<pxMoveImportDateTime/>
+<pyTransmissionEpilog/>
+<pxObjClass>Data-Admin-Connect-FileListener</pxObjClass>
+<pyTemplateInputBox/>
+<pyPersistLogServiceFile>false</pyPersistLogServiceFile>
+<pxCreateOperator>guru</pxCreateOperator>
+<pyBlocked>false</pyBlocked>
+<pxCreateSystemID>pega</pxCreateSystemID>
+<pxLimitedAccess>Dev</pxLimitedAccess>
+<pyThreshold>1</pyThreshold>
+<pxCommitDateTime>20231030T225444.147 GMT</pxCommitDateTime>
+<pzOriginalInstanceKey>DATA-ADMIN-CONNECT-FILELISTENER PROCESSLOANREQUEST</pzOriginalInstanceKey>
+<pyLabel>ProcessLoanRequest</pyLabel>
+<pxCreateOpName>Gurubrahmanandam Ekambaram</pxCreateOpName>
+<pyStreamName/>
+<pyRuleSetName>LSA</pyRuleSetName>
+<pzStatus>valid</pzStatus>
+<pyNodeIds REPEATINGTYPE="PropertyList">
+<rowdata REPEATINGINDEX="1"/>
+</pyNodeIds>
+<pxWarnings REPEATINGTYPE="PageList">
+<rowdata REPEATINGINDEX="1">
+<pxObjClass>Embed-Warning</pxObjClass>
+<pxWarningSeverity>3</pxWarningSeverity>
+<pxWarningMessage>(@baseclass)pxShouldNotBeConstant Source location</pxWarningMessage>
+<pxWarningType>Maintainability</pxWarningType>
+<pxWarningCreateOperator>B103134</pxWarningCreateOperator>
+<pxWarningRuleSetType>PEGA</pxWarningRuleSetType>
+<pxWarningName>Use application setting</pxWarningName>
+<pxWarningCreatedTime>20231030T225443.976 GMT</pxWarningCreatedTime>
+<pxWarningDetails>(@baseclass)pxShouldNotBeConstant Source location</pxWarningDetails>
+</rowdata>
+</pxWarnings>
+<pyNodeValues REPEATINGTYPE="PageList">
+<rowdata REPEATINGINDEX="1">
+<pxObjClass>Embed-ListenerNodes</pxObjClass>
+<pyNodeCount/>
+<pyHostName/>
+</rowdata>
+</pyNodeValues>
+<pyListenerNodes REPEATINGTYPE="PropertyList">
+<rowdata REPEATINGINDEX="1"/>
+</pyListenerNodes>
+<pyNodeTypes REPEATINGTYPE="PageList"/>
+</pagedata>
