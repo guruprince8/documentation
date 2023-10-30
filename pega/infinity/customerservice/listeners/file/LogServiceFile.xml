@@ -1,0 +1,27 @@
+<pagedata>
+<pyListenerName>ProcessLoanRequest</pyListenerName>
+<pxInsName>-170702860.1698708029313000!PROCESSLOANREQUEST!001.XML</pxInsName>
+<pxSaveDateTime>20231030T232029.315 GMT</pxSaveDateTime>
+<pzReindex>true</pzReindex>
+<pyBytesProcessed>0</pyBytesProcessed>
+<pyRequestorId>AR7EFWUDGFTDH14I3KRAATBNGUB00JG1CA</pyRequestorId>
+<pyFileName>001.xml</pyFileName>
+<pzInsKey>LOG-SERVICE-FILE -170702860.1698708029313000!PROCESSLOANREQUEST!001.XML</pzInsKey>
+<pyDateTime>20231030T232029.314 GMT</pyDateTime>
+<pyRecoveryAttempt>0</pyRecoveryAttempt>
+<pyProcessingComplete>true</pyProcessingComplete>
+<pyActiveSegment>0</pyActiveSegment>
+<pxObjClass>Log-Service-File</pxObjClass>
+<pyOriginalDirectory>//Users/gurubrahmanadamekambaram/Desktop/peony/LSA/XML/pega/88/</pyOriginalDirectory>
+<pyTransactionCount>1</pyTransactionCount>
+<pyUniqueId>-170702860.1698708029313000</pyUniqueId>
+<pyFileLastModified>20231030T231949.571 GMT</pyFileLastModified>
+<pyFileLength>48</pyFileLength>
+<pxCreateDateTime>20231030T232029.314 GMT</pxCreateDateTime>
+<pyTransactionErrorCount>0</pyTransactionErrorCount>
+<pyOriginalFileName>001.xml</pyOriginalFileName>
+<pyProcessingStatus>initial</pyProcessingStatus>
+<pyPathName>//Users/gurubrahmanadamekambaram/Desktop/peony/LSA/XML/pega/88/001.xml</pyPathName>
+<pyServerName>nss-admins-MBP.attlocal.net</pyServerName>
+<pzStatus>valid</pzStatus>
+</pagedata>
