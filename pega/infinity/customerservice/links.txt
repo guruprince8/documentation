@@ -10,3 +10,6 @@ https://docs.pega.com/bundle/platform-88/page/platform/security/test-login-authe
 
 /* Alerts */
 https://docs.pega.com/bundle/alerts/page/platform/alerts/alerts-overview.html
+
+/* Pega All Frameworks Documenation */
+https://docs.pega.com/bundle/pega-all-products/page/resource-library/product-list/all-products.html
