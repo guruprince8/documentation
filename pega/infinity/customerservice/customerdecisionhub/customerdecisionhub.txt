@@ -1,5 +1,0 @@
-/* Links */
-https://docs.pega.com/category/cdhi23?labelkey=8-9&labelkey=customer-decision-hub
-
-/* Installation */
-https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/install/installing-cdh.html#tsk-installing-cdh
