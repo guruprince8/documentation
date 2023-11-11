@@ -1,3 +1,9 @@
+-- System Monitoring 
+https://docs.pega.com/system-administration/86/viewing-statistics-services-services-pal-log
+-- Data Management
+https://docs.pega.com/data-management-and-integration/86/pega-api-services
+
+
 /* Login Screen Customization */
 https://docs-previous.pega.com/user-experience/86/editing-source-html-your-login-screen
 
