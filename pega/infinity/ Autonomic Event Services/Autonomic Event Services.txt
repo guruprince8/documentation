@@ -1,0 +1,3 @@
+https://docs.pega.com/pega-autonomic-event-services/pega-autonomic-event-services
+http://www.javawenti.com/?post=94408
+https://docs.pega.com/pdc/pega-predictive-diagnostic-cloud-pdc/pega-predictive-diagnostic-cloud
