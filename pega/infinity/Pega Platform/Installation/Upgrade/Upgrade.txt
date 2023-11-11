@@ -1,0 +1,71 @@
+/* Ref Links */
+https://docs.pega.com/bundle/keeping-current/page/keeping-current/kc/extended-support-policy.html
+
+https://helm.sh/docs/
+https://github.com/bitnami/charts/blob/main/bitnami/mongodb/values.yaml
+https://bitnami.com/stack/mongodb/helm
+https://github.com/pegasystems/pega-helm-charts
+https://docs.pega.com/bundle/platform/page/platform/deployment/externalization-of-services/deploying-srs.html#tsk-deploying-srs
+https://docs.pega.com/bundle/platform/page/platform/hub/platform-install-update.html
+https://docs.pega.com/bundle/platform/page/platform/deployment/client-managed-cloud/pega-docker-images-manage.html#cmc-docker-images-overview
+
+
+cat .kube/config
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /Users/gurubrahmanadamekambaram/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Sat, 30 Sep 2023 16:39:07 CDT
+        provider: minikube.sigs.k8s.io
+        version: v1.31.2
+      name: cluster_info
+    server: https://127.0.0.1:64506
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Sat, 30 Sep 2023 16:39:07 CDT
+        provider: minikube.sigs.k8s.io
+        version: v1.31.2
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /Users/gurubrahmanadamekambaram/.minikube/profiles/minikube/client.crt
+    client-key: /Users/gurubrahmanadamekambaram/.minikube/profiles/minikube/client.key
+
+
+/* helm repo add pega https://pegasystems.github.io/pega-helm-charts */
+"pega" has been added to your repositories
+/ * helm search repo pega */
+pega/pega           	3.7.1        	           	Pega installation on kubernetes                   
+pega/addons         	3.7.1        	1.0        	A Helm chart for Kubernetes                       
+pega/backingservices	3.7.1        	           	Helm Chart to provision the latest Search and R...
+
+/* helm inspect values pega/pega > pega.yaml */
+  
+/* helm inspect values pega/addons > addons.yaml */
+  
+/* helm inspect values pega/backingservices > backingservices.yaml */
+
+/* kubectl create namespace mypega */
+  
+/* kubectl create namespace pegaaddons */
+  
+/* kubectl create namespace pegabackingservices */
+
+/* helm install backingservices pega/backingservices --namespace pegabackingservices --values backingservices.yaml */
+
+/* helm install addons pega/addons --namespace pegaaddons --values addons.yaml */
+
+/* helm install mypega pega/pega --namespace mypega --values pega.yaml */ 
