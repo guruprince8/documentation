@@ -1,2 +1,0 @@
-/* Preview Panel */
-https://collaborate.pega.com/question/cosmos-show-custom-section-preview-panel
