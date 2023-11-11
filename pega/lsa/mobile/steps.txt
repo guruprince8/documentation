@@ -1,2 +1,0 @@
-/* Pega Docs Link - 8.7 */
-https://docs.pega.com/mobile/87/mobile-solutions
