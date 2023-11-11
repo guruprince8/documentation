@@ -77,7 +77,7 @@ GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
 /* Kafka Startup */
 https://docs-previous.pega.com/decision-management/87/configuring-external-kafka-stream-service
 https://hevodata.com/learn/install-kafka-on-mac/
-cd ~/Desktop/peony/LSA/kafka/kafka_2.12-3.5.1
+cd ~/Desktop/peony/LSA/pega/kafka/kafka_2.12-3.5.1
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
 $ bin/kafka-server-start.sh config/server.properties
 
