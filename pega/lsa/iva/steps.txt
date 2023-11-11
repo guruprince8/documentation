@@ -1,2 +1,0 @@
-/* Pega Docs Link - 8.6 */
-https://docs.pega.com/conversational-channels/86/pega-intelligent-virtual-assistant-overview
