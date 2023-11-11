@@ -1,0 +1,23 @@
+https://www.elastic.co/downloads/elasticsearch
+https://www.elastic.co/downloads/elasticsearch
+https://www.elastic.co/downloads/kibana
+https://www.elastic.co/guide/en/elasticsearch/client/java-api-client/current/index.html
+https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html
+
+/* Starting elastic node */
+/Users/gurubrahmanadamekambaram/Desktop/peony/LSA/elasticsearch-8.10.2/bin
+./elasticsearch -E xpack.security.enabled=false
+
+/* Starting Kibana */
+cd /Users/gurubrahmanadamekambaram/Desktop/peony/LSA/kibana-8.10.2/bin
+./kibana
+
+elasticsearch -E xpack.security.enabled=false
+ fDh*AZNVj77AC0HqB9MG
+
+docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB docker.elastic.co/elasticsearch/elasticsearch:8.10.2
+
+/* Elastic Search REST API's */
+https://www.elastic.co/guide/en/elasticsearch/reference/8.10/rest-apis.html
+curl -X GET http://localhost:9200
+curl -XGET "http://localhost:9200/_cat/indices?v&expand_wildcards=all" -H "kbn-xsrf: reporting"
