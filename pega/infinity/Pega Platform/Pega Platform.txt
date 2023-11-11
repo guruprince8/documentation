@@ -3,6 +3,12 @@ https://docs.pega.com/system-administration/86/viewing-statistics-services-servi
 -- Data Management
 https://docs.pega.com/data-management-and-integration/86/pega-api-services
 
+1. https://docs.pega.com/security/85/configuring-platform-cipher
+2. https://community.pega.com/sites/default/files/help_v84/procomhelpmain.htm#security/data-encryption/custom-kms-app-data-tsk.htm
+3. https://community.pega.com/sites/default/files/help_v81/procomhelpmain.htm#data-/data-admin-/data-admin-security-/data-admin-security-keystore/creating-a-data-page-activity-for-a-keystore-tsk.htm
+4. https://docs.pega.com/security/86/encrypting-application-data-using-custom-key-management-service
+
+
 
 /* Login Screen Customization */
 https://docs-previous.pega.com/user-experience/86/editing-source-html-your-login-screen
