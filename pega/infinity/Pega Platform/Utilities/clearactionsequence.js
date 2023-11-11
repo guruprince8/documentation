@@ -14,3 +14,30 @@ function ClearActionQueue(clrActions){
   /* use the above function in runScript action and pass the property as input parameter to that )
   
   /* Note - Please keep the above function in any of the JS Files accesible to HTML element - likely in Portal level harness otherwise in Perform harness ) */
+
+
+  /* Set Busy Indicator ----------- start */
+https://collaborate.pega.com/question/busy-indicator-not-displaying
+
+<input id="maskImageID" type="text" onchange='turnOnBusyInd()'/>
+<script>
+
+function turnOnBusyInd() {
+  pega.u.d.busyIndInterval = 0;
+  pega.u.d.setBusyIndicator(document.body,true);
+  if(pega.u.d.gBusyInd) {
+    pega.u.d.gBusyInd.setTargetElement(document.body);
+    pega.u.d.gBusyInd.show(true);
+
+  }
+}
+
+function turnOffBusyInd() {
+
+pega.u.d.gBusyInd.hide();
+
+}
+
+</script>
+
+/* Set Busy Indicator ----------- end */
