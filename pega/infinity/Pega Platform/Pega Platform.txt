@@ -1,3 +1,6 @@
+/* Preview Panel */
+https://collaborate.pega.com/question/cosmos-show-custom-section-preview-panel
+
 -- Pega Wiki
 https://wiki.pega.com/index.php/Handling_External_Assignments_in_Pega
 
