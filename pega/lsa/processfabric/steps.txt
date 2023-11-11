@@ -1,2 +1,0 @@
-/* Pega Docs Link */
-https://docs.pega.com/pega-process-fabric-hub/10/pega-process-fabric-hub
