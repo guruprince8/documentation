@@ -1,0 +1,14 @@
+/ * Platform */
+https://academy.pega.com/module/enabling-autonomous-enterprise-through-pega-genai/v1
+ - Life cycle authoring
+ - Pega GenAI use cases with data and integration
+ - Pega GenAI run-time use cases
+  - Fill form with AI
+  - Chat with your data Insights
+  - Add new language support
+  - Prediction widget
+
+/* Customer Service */
+https://academy.pega.com/module/enhance-customer-service-pega-genai/v1/in/62536
+ - Eliminate wrap-up time with auto-summarization
+ - Accelerate training with Pega GenAI
