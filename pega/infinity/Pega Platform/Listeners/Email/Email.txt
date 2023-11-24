@@ -1,1 +1,14 @@
+/* Email Channel Classes */
+Data-Channel-Email
+Data-Decision-Request-Email 
+Data-Decision-Request-Email-RUIWJKPK ( Text Prediction )
+
+/* Taxanomy Rules */
+pyInteractionTaxonomy - Decision Data
+pyGetActionFromIVAConfig - Decsion Table
+pyInteractionTA - Text Analyzer
+
+// Text categorization
+pySentimentLexicon - Lexicon
+pySentimentModels - Decision Data
 
