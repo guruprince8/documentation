@@ -1,0 +1,14 @@
+/* Home Page */
+pyCreateCaseMenu - Navigation
+pz-cosmos-ui-portal - JS
+
+/* Create Work Javascript functions */
+// launch directly perform harness
+pega.desktop.createNewWork(className,"", flowName,"", "", "", false);
+// launch in modal dialog
+pega.desktop.createNewWork(className,"", flowName,flowParams||"", "", "", false,{ 
+                      "target": "actertiary"
+                  
+                  });
+// launch in modal dialog 
+pega.desktop.infinity.createNewWorkInDialogContainer
