@@ -18,3 +18,5 @@ C:\Users\Administrator\AppData\Roaming\Pegasystems
 C:\ProgramData\Pegasystems -
 C:\Users\Administrator\AppData\Local - Consists of Downloaded packages from Robot Manager  
 
+/* Robot Studio */
+
