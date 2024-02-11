@@ -1,5 +1,20 @@
 /* Links */
 https://docs.pega.com/bundle/robotic-automation-221/page/robotic-automation/pega-rpa-ga.html
+https://support.pega.com/question/error-unable-load-runtime-required-version-older-installed-runtime-version?
+https://docs-previous.pega.com/pega-robot-manager/873/configuring-repository-package-data?
 
 /* Important Folders */
+/* Runtime */
+C:\Program Files (x86)\Pegasystems\Pega Native Foundation
+C:\Program Files (x86)\Pegasystems\Pega RPA Service
+C:\Program Files (x86)\Pegasystems\Pega Browser Extension
+C:\Program Files (x86)\Pegasystems\Pega Robot Runtime v22
+C:\Program Files (x86)\Pegasystems\Pega Synchronization Engine
+
+C:\Program Files\Pegasystems\Pega Synchronization Server
+C:\Program Files\Pegasystems\Pega Server Status
+
+C:\Users\Administrator\AppData\Roaming\Pegasystems
+C:\ProgramData\Pegasystems -
+C:\Users\Administrator\AppData\Local - Consists of Downloaded packages from Robot Manager  
 
