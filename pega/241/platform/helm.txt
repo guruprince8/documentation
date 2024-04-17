@@ -1,0 +1,14 @@
+$ helm version
+version.BuildInfo{Version:"v3.0.0", GitCommit:"e29ce2a54e96cd02ccfce88bee4f58bb6e2a28b6", GitTreeState:"clean", GoVersion:"go1.13.4"}
+
+$ helm repo add pega https://pegasystems.github.io/pega-helm-charts
+
+$ helm search repo pega
+NAME       	            CHART VERSION	APP VERSION	DESCRIPTION
+pega/pega  	              1.4.4        	           	Helm chart to configure required installation and deployment configuration settings in your environment for your deployment.
+pega/addons	              1.4.4        	1.0        	Helm chart to configure supporting services and tools in your environment for your deployment.
+pega/backingservices      1.4.4        	            Helm Chart to provision the latest Search and Reporting Service (SRS) for your Pega Infinity deployment
+
+$ helm inspect values pega/pega > pega.yaml
+$ helm inspect values pega/addons > addons.yaml
+$ helm inspect values pega/backingservices > backingservices.yaml
