@@ -1,5 +1,24 @@
 
---  brew services start kafka
+/* Install home brew using the following command */
+-- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/*** install open JDK 17 */
+-- brew install openjdk@17
+
+/* Install postgres 14 */
+-- brew install postgresql@14
+-- /opt/homebrew/var/postgresql@14
+-- cd /opt/homebrew/var/log 
+/* If issues with postgres restart */
+-- rm -rf /opt/homebrew/var/postgresql@14/postmaster.pid
+-- rm /opt/homebrew/var/postgresql/postmaster.pid
+-- rm /usr/local/var/postgres/postmaster.pid
+-- brew services restart postgresql
+-- https://wiki.postgresql.org/wiki/Homebrew
+
+/* Install PgAdmin 4 from https://www.pgadmin.org/download/pgadmin-4-macos/ */
+-- https://www.pgadmin.org/download/pgadmin-4-macos/
+
+/* Create DB schemas as per below schema creation scripts */
 
 -- SCHEMA: data_241
 
@@ -66,4 +85,18 @@ GRANT EXECUTE ON FUNCTIONS TO postgres WITH GRANT OPTION;
 ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA customer_241
 GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
 
+/* Download media zips using Pega support portal and needs be added to partner account administrators */
+
 -- https://docs.pega.com/bundle/customer-service-financial/page/customer-service-financial/install-update-adoption/intro-install-constellation-csfs.html
+
+-- Install Pega FFS 
+ -- \Rules\PegaFFS_Int.jar
+ -- \Rules\PegaFFS.jar
+ -- \Rules\PegaFFS_Sample.jar
+ -- \Rules\PegaFFS_Schema.jar
+ -- \Rules\PegaFFS_DataInstances.jar 
+ -- Sample Data
+ -- \SampleData\PegaFFS_SampleSchema.jar
+ -- \SampleData\PegaFFS_SampleDataInstances.jar
+ -- \SampleData\PegaFFS_SnapSchema.jar
+ -- \SampleData\PegaFFS_SnapDataInstances.jar
