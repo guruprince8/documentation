@@ -90,6 +90,8 @@ GRANT EXECUTE ON FUNCTIONS TO postgres WITH GRANT OPTION;
 ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA customer_241
 GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
 
+-- export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home"
+
 /* Download media zips using Pega support portal and needs be added to partner account administrators */
 
 -- https://docs.pega.com/bundle/customer-service-financial/page/customer-service-financial/install-update-adoption/intro-install-constellation-csfs.html
