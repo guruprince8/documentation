@@ -15,6 +15,9 @@
 -- brew services restart postgresql
 -- https://wiki.postgresql.org/wiki/Homebrew
 
+ALTER USER postgres WITH PASSWORD 'postgres';
+
+
 /* Install PgAdmin 4 from https://www.pgadmin.org/download/pgadmin-4-macos/ */
 -- https://www.pgadmin.org/download/pgadmin-4-macos/
 
