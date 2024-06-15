@@ -89,7 +89,7 @@ GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
 
 -- https://docs.pega.com/bundle/customer-service-financial/page/customer-service-financial/install-update-adoption/intro-install-constellation-csfs.html
 
--- Install Pega FFS 
+-- Install Pega using FFS 117811_PFFS_24.1.0
  -- \Rules\PegaFFS_Int.jar
  -- \Rules\PegaFFS.jar
  -- \Rules\PegaFFS_Sample.jar
@@ -100,3 +100,24 @@ GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
  -- \SampleData\PegaFFS_SampleDataInstances.jar
  -- \SampleData\PegaFFS_SnapSchema.jar
  -- \SampleData\PegaFFS_SnapDataInstances.jar
+ -- PDFS
+ -- \ResourceKit\PDFS\Rules\PegaPDFS.jar
+ -- \ResourceKit\PDFS\rules\PegaPDFS_Implementation.jar
+ -- \ResourceKit\PDFS\SampleData\PegaPDFSSampleProducts.jar
+ -- \ResourceKit\PDFS\SampleData\PegaPDFSSampleObjects.jar
+
+-- Install Common Data Model using 117758_PCDM_24.1.0
+ -- \Rules\Common.jar
+ -- \ResourceKit\CommonReferenceData.jar
+
+-- Install Common Data Model using 117762_PCDMFS_24.1.0
+ -- \Rules\Common-FinancialServices.jar
+ -- \ResourceKit\CommonFSReferenceData.jar
+
+-- Install Customer Service using 117790_PCRM_24.1.0
+ -- \Rules\CustomerService-Cases.jar
+ -- \Rules\PegaCRM.jar
+
+-- Install Customer Service Financials Using 117793_PCRMFS_24.1.0
+ --\Rules\CustomerService-Cases-FS.jar
+ --\Rules\PegaCRMFS.jar
