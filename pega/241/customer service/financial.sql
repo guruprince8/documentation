@@ -17,7 +17,8 @@
 
 ALTER USER postgres WITH PASSWORD 'postgres';
 CREATE USER postgres WITH PASSWORD 'postgres';
-
+grant all privileges on database postgres to postgres;
+flush privileges;
 
 /* Install PgAdmin 4 from https://www.pgadmin.org/download/pgadmin-4-macos/ */
 -- https://www.pgadmin.org/download/pgadmin-4-macos/
