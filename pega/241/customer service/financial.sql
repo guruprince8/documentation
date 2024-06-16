@@ -95,6 +95,10 @@ GRANT USAGE ON TYPES TO postgres WITH GRANT OPTION;
 /* Download media zips using Pega support portal and needs be added to partner account administrators */
 
 -- https://docs.pega.com/bundle/customer-service-financial/page/customer-service-financial/install-update-adoption/intro-install-constellation-csfs.html
+-- install platform using install.sh
+
+/* Tomcat download */
+-- https://tomcat.apache.org/download-90.cgi
 
 -- Install Pega using FFS 117811_PFFS_24.1.0
  -- \Rules\PegaFFS_Int.jar
