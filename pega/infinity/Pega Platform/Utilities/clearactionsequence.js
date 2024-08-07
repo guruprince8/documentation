@@ -41,3 +41,20 @@ pega.u.d.gBusyInd.hide();
 </script>
 
 /* Set Busy Indicator ----------- end */
+
+  /* Smart Info 
+
+  <span title="<p:r n='$this-value'/>" onclick="pega.control.Actions.prototype.showSmartTip(event,'standard','<p:r n='$this-value'/>')"><i class="pi pi-information-solid"></i></span>
+
+<%
+  out.print(org.jsoup.Jsoup.parse(tools.getActiveValue()).body().text());
+%>
+
+<p:r n='$this-value' m='richtext'/>
+<p:r n='$this-value' m='richtext'/>
+
+
+
+
+
+
