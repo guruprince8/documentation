@@ -10,6 +10,9 @@
 /*** install open JDK 17 */
 -- brew install openjdk@17
 
+sudo ln -sfn /usr/local/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> /Users/xion/.bash_profile
+
 /* Install postgres 14 */
 -- brew install postgresql@14
 -- /opt/homebrew/var/postgresql@14
