@@ -24,6 +24,8 @@ echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> /Users/xion/.bash_pr
 -- brew services restart postgresql
 -- https://wiki.postgresql.org/wiki/Homebrew
 
+psql postgres
+
 ALTER USER postgres WITH PASSWORD 'postgres';
 CREATE USER postgres WITH PASSWORD 'postgres';
 grant all privileges on database postgres to postgres;
