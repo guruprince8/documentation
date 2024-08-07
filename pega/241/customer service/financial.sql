@@ -1,6 +1,12 @@
 
 /* Install home brew using the following command */
 -- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+-- execut the following eval commands
+
+-- (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/xion/.bash_profile
+--eval "$(/usr/local/bin/brew shellenv)"
+
 /*** install open JDK 17 */
 -- brew install openjdk@17
 
