@@ -7,6 +7,8 @@ docker run -p 1081:1080 pega-docker.downloads.pega.com/constellationui/cdn-onpre
 
 docker run -p 1081:1080 pega-docker.downloads.pega.com/constellationui/cdn-onprem:8.23.0-ga-100
 
+docker run -p 1081:1080 pega-docker.downloads.pega.com/constellationui/cdn-onprem:24.1.0-ga-28
+
 
 http://localhost:1081/
 
