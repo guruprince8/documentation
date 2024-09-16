@@ -64,3 +64,6 @@ helm uninstall  my-release -n mypega
 
 kubectl get secret my-release-kafka-user-passwords --namespace mypega -o jsonpath='{.data.client-passwords}' | base64 -d | cut -d , -f 1
 --z8Yn35iwf0
+
+$ helm install mypega pega/pega --namespace mypega --values pega.yaml
+
