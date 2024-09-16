@@ -69,3 +69,8 @@ $ helm install mypega pega/pega --namespace mypega --values pega.yaml
 helm uninstall mypega -n mypega
 release "mypega" uninstalled
 
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm search repo bitnami
+helm install my-release bitnami
+https://github.com/pegasystems/pega-helm-charts/blob/master/charts/pega/KafkaClusterRequirement.md
+
