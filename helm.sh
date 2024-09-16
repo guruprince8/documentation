@@ -66,4 +66,6 @@ kubectl get secret my-release-kafka-user-passwords --namespace mypega -o jsonpat
 --z8Yn35iwf0
 
 $ helm install mypega pega/pega --namespace mypega --values pega.yaml
+helm uninstall mypega -n mypega
+release "mypega" uninstalled
 
