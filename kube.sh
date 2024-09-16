@@ -161,3 +161,7 @@ Events:          <none>
 
 kubectl -n mypega exec -it my-release-kafka-controller-0 -- /bin/sh
 Defaulted container "kafka" out of: kafka, kafka-init (init)
+
+kubectl -n mypega exec -it pega-minikube-0 -- /bin/s
+cd /usr/local/tomcat/logs/pega-minikube-0
+tail -f PegaRULES.log
