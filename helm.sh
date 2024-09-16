@@ -64,6 +64,7 @@ helm uninstall  my-release -n mypega
 
 kubectl get secret my-release-kafka-user-passwords --namespace mypega -o jsonpath='{.data.client-passwords}' | base64 -d | cut -d , -f 1
 --z8Yn35iwf0
+https://docs.confluent.io/operator/2.3/co-authenticate.html#co-authenticate-kafka-plain
 
 $ helm install mypega pega/pega --namespace mypega --values pega.yaml
 helm uninstall mypega -n mypega
