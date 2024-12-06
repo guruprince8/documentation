@@ -292,12 +292,17 @@ https://community.pega.com/marketplace/components/pega-robot-manager
 https://docs.pega.com/pega-robot-manager/871/pega-robot-manager
 
 -- these are the cache tables in pega 
+-- https://support.pega.com/question/stream-node-issue-after-upgrade?
 truncate table pr_sys_appcache_entry;
 truncate table pr_sys_appcache_dep;
 truncate table pr_sys_appcache_shortcut;
 truncate table pr_assembledclasses;
 truncate table pr_sys_rule_impl;
 truncate table pr4_rule_sysgen;
+runcate table pr_data_stream_nodes;
+truncate table pr_data_stream_sessions;
+truncate table pr_data_stream_node_updates;
+truncate table PR_SYS_STATUSNODES;
 
 truncate table pr_sys_appcache_entry;
 truncate table pr_sys_appcache_dep;
